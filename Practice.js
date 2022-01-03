@@ -1,6 +1,6 @@
 // --- MULTI DIMENSIONAL LOOPING ARRAY ---
 
-// PRACTICE 1: USING FOR
+// Practice 1: USING FOR
 let grades = [
   ["Math", "Science", "English"],
   ["90", "80", "20"],
@@ -12,7 +12,7 @@ for (let i = 0; i < grades.length; i++) {
   }
 }
 
-// USING FOREACH
+// Practice 2: USING FOREACH
 let grades = [
   ["Math", "Science", "English"],
   ["90", "80", "20"],
@@ -24,7 +24,7 @@ grades.forEach((Items) => {
   });
 });
 
-// PRACTICE 2: USING FOR OF
+// Practice 3: USING FOR OF
 let grades = [
   ["Math", "Science", "English"],
   ["90", "80", "20"],
@@ -38,12 +38,12 @@ for (let item of grades) {
 
 // --- ARRAY --
 
-// PRACTICE 3: Basics One Dimensional
+// Practice 4: Basics One Dimensional
 let fruits = ["Apple", "Banana", "Orange"];
 
 console.log(`${fruits[0]} and ${fruits[1]}`);
 
-// Multi Dimensional
+// Practice 5: Multi Dimensional
 let numbers = [
   [1, 2, 3],
   [0.2, 0.5, 0.9],
@@ -51,7 +51,7 @@ let numbers = [
 
 console.log(`Total: ${numbers[0][0] + numbers[1][0]}`);
 
-// PRACTICE 4: Push Pop Array
+// Practice 6: Push Pop Array
 let numbers = [2, 3, 4, 5];
 
 console.log(numbers);
@@ -61,7 +61,7 @@ numbers.pop();
 
 console.log(numbers);
 
-// PRACTICE 5: Pop and get first array and last array
+// Practice 7: Pop and get first array and last array
 let letters = [1, 2, 3, 4, 5];
 console.log(`${letters}`);
 let firstLetter = letters[0];
@@ -74,7 +74,7 @@ letters.unshift(firstLetter);
 letters.push(lastLetter);
 console.log(`${letters}`);
 
-// PRACTICE 6: Display odd and even arrays
+// Practice 8: Display odd and even arrays
 let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 console.log(`Array: ${numbers}`);
 
@@ -88,7 +88,7 @@ for (let i = 0; i <= numbers.length - 1; i += 2) {
   console.log(`${numbers[i]}`);
 }
 
-// PRACTICE 7: Accessing Objects
+// Practice 9: Accessing Objects
 let userName = "Juan"; // User Input
 let userPassword = "000"; // User Input
 
@@ -142,8 +142,8 @@ try {
   }
 } catch (error) {}
 
-// -- Functions --
-// PRACTICE 8: Return
+// -- FUNCTIONS --
+// Practice 10: Return
 let InputFirstName = () => {
   return "Joshua";
 };
@@ -158,7 +158,7 @@ let FullName = () => {
 
 console.log(FullName());
 
-// PRACTICE 9: Passing Data
+// Practice 11: Passing Data
 let userData = {
   userName: "Joshua",
   Password: "123",
