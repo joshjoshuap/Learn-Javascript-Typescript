@@ -1,6 +1,6 @@
 // Conditional
 
-// Practice 1: If Else
+// If Else
 let age = 18;
 
 if (age >= 18) {
@@ -9,7 +9,7 @@ if (age >= 18) {
   console.log("Minor not allowed");
 }
 
-// Practice 2: Nested If Else
+// Nested If Else
 let age = 1;
 
 if (age <= 2) {
@@ -26,10 +26,10 @@ if (age <= 2) {
   console.log("Meh?? Invalid Age");
 }
 
-// Practice 3: Advanced Multiple Nested If Else
+// Multiple Nested If Else
 let name = "Joshua";
 let age = 18;
-let country = "Pilippines";
+let country = "Philippines";
 
 let firstLetterName = name.substring(0, 1);
 
@@ -41,7 +41,7 @@ if (firstLetterName == "J" || firstLetterName == "j") {
       console.log("Welcome Back to the Philippines " + name);
     } else {
       console.log(
-        "My bad other countries are banned, only from Phillipines can enter"
+        "My bad other countries are banned, only from Philippines can enter"
       );
     }
   } else {
@@ -50,3 +50,34 @@ if (firstLetterName == "J" || firstLetterName == "j") {
 } else {
   console.log("Sorry Only Name that starts in letter J Accepted");
 }
+
+// Switch Case
+let OnetoFive = Math.round(Math.random() * 5 + 1);
+
+switch (OnetoFive) {
+  case 1:
+    console.log("Number 1");
+    break;
+  case 2:
+    console.log("Number 2");
+    break;
+  case 3:
+    console.log("Number 3");
+    break;
+  case 4:
+    console.log("Number 4");
+    break;
+  case 5:
+    console.log("Number 5");
+}
+
+// Ternary Operator
+let username = "admin";
+let password = "admin123";
+
+let ifMatched =
+  username == "admin" && password == "admin123"
+    ? "Username and Password Matched"
+    : "Not Matched";
+
+console.log(ifMatched);

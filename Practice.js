@@ -1,6 +1,6 @@
 // --- MULTI DIMENSIONAL LOOPING ARRAY ---
 
-// Practice 1: USING FOR
+// USING FOR
 let grades = [
   ["Math", "Science", "English"],
   ["90", "80", "20"],
@@ -12,7 +12,7 @@ for (let i = 0; i < grades.length; i++) {
   }
 }
 
-// Practice 2: USING FOREACH
+// USING FOREACH
 let grades = [
   ["Math", "Science", "English"],
   ["90", "80", "20"],
@@ -24,7 +24,7 @@ grades.forEach((Items) => {
   });
 });
 
-// Practice 3: USING FOR OF
+// USING FOR OF
 let grades = [
   ["Math", "Science", "English"],
   ["90", "80", "20"],
@@ -37,44 +37,7 @@ for (let item of grades) {
 }
 
 // --- ARRAY --
-
-// Practice 4: Basics One Dimensional
-let fruits = ["Apple", "Banana", "Orange"];
-
-console.log(`${fruits[0]} and ${fruits[1]}`);
-
-// Practice 5: Multi Dimensional
-let numbers = [
-  [1, 2, 3],
-  [0.2, 0.5, 0.9],
-];
-
-console.log(`Total: ${numbers[0][0] + numbers[1][0]}`);
-
-// Practice 6: Push Pop Array
-let numbers = [2, 3, 4, 5];
-
-console.log(numbers);
-
-numbers.push(6);
-numbers.pop();
-
-console.log(numbers);
-
-// Practice 7: Pop and get first array and last array
-let letters = [1, 2, 3, 4, 5];
-console.log(`${letters}`);
-let firstLetter = letters[0];
-let lastLetter = letters[letters.length - 1];
-for (let i = 0; i < letters.length + 4; i++) {
-  letters.shift();
-  letters.pop();
-}
-letters.unshift(firstLetter);
-letters.push(lastLetter);
-console.log(`${letters}`);
-
-// Practice 8: Display odd and even arrays
+// Display odd and even arrays
 let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 console.log(`Array: ${numbers}`);
 
@@ -88,7 +51,7 @@ for (let i = 0; i <= numbers.length - 1; i += 2) {
   console.log(`${numbers[i]}`);
 }
 
-// Practice 9: Accessing Objects
+// Accessing Objects
 let userName = "Juan"; // User Input
 let userPassword = "000"; // User Input
 
@@ -143,7 +106,7 @@ try {
 } catch (error) {}
 
 // -- FUNCTIONS --
-// Practice 10: Return
+//  Return
 let InputFirstName = () => {
   return "Joshua";
 };
@@ -158,7 +121,7 @@ let FullName = () => {
 
 console.log(FullName());
 
-// Practice 11: Passing Data
+//  Passing Data
 let userData = {
   userName: "Joshua",
   Password: "123",
@@ -186,3 +149,18 @@ let UserInput = (userNameInput, userPasswordInput) => {
 };
 
 UserInput("Joshua", "1234");
+
+// Function calling Function
+let calcAverage = (score1, score2, score3) => {
+  return (score1 + score2 + score3) / 3;
+};
+
+let checkPassed = (grade1, grade2, grade3) => {
+  let totalGrade = calcAverage(grade1, grade2, grade3);
+
+  if (totalGrade >= 75) {
+    console.log(`You Passed Grade: ${totalGrade}`);
+  } else [console.log(`You Failed Grade: ${totalGrade}`)];
+};
+
+checkPassed(80, 85, 100);
