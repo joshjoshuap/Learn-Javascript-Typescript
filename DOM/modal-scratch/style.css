@@ -1,0 +1,56 @@
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  position: relative;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 80vh;
+  margin: 0 auto;
+  z-index: 0;
+}
+
+.modal {
+  position: absolute;
+  top: 200px;
+  left: 500px;
+  width: 500px;
+  background-color: white;
+  border: 2px black solid;
+  border-radius: 10px;
+  padding: 50px;
+  z-index: 1;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.btn-modal {
+  width: 100px;
+  height: 50px;
+}
+
+.modal-close {
+  display: grid;
+  justify-content: end;
+}
+
+.btn-close {
+  height: 40px;
+  width: 40px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.btn-close:hover {
+  background-color: white;
+  color: red;
+  border: 2px solid red;
+}
