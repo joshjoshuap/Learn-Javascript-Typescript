@@ -1,0 +1,32 @@
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 32px;
+}
+
+.container {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.key-row {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin: 20px;
+}
+
+.key-row > div {
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.key-pressed {
+  background-color: black;
+  color: white;
+  border: 2px solid gray;
+  transition: 0.5s;
+}
+.displayText {
+  text-align: center;
+}

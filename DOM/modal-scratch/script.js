@@ -9,7 +9,13 @@ btnModal.addEventListener("click", () => {
 });
 
 btnClose.addEventListener("click", () => {
-  console.log("clicked");
   modal.style.visibility = "hidden"; // modal hidden
   body.style.backgroundColor = "transparent"; // remove background in body
+});
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    modal.style.visibility = "hidden"; // modal hidden
+    body.style.backgroundColor = "transparent"; // remove background in body
+  }
 });

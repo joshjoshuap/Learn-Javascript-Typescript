@@ -1,0 +1,99 @@
+html,
+body {
+  margin: 0;
+}
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div {
+  height: 100vh;
+  width: auto;
+}
+
+button {
+  height: 100px;
+  width: 100px;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  margin: 0 3px;
+  transition: box-shadow 0.5s, transform 0.5s;
+}
+
+.red {
+  background-color: red;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.orange {
+  background-color: orange;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.green {
+  background-color: green;
+}
+
+.red:hover {
+  box-shadow: 2px 5px 10px red;
+  transform: translateY(-5px);
+  cursor: pointer;
+}
+
+.blue:hover {
+  box-shadow: 2px 5px 10px blue;
+  transform: translateY(-5px);
+  cursor: pointer;
+}
+
+.orange:hover {
+  box-shadow: 2px 5px 10px orange;
+  transform: translateY(-5px);
+  cursor: pointer;
+}
+
+.yellow:hover {
+  box-shadow: 2px 5px 10px yellow;
+  transform: translateY(-5px);
+  cursor: pointer;
+}
+
+.green:hover {
+  box-shadow: 3px 8px 10px green;
+  transform: translateY(-5px);
+  cursor: pointer;
+}
+
+.bg-red {
+  background-color: red;
+  color: black;
+}
+
+.bg-blue {
+  background-color: blue;
+  color: black;
+}
+
+.bg-orange {
+  background-color: orange;
+  color: black;
+}
+
+.bg-yellow {
+  background-color: yellow;
+  color: black;
+}
+
+.bg-green {
+  background-color: green;
+  color: black;
+}
