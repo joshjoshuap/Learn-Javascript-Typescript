@@ -1,4 +1,5 @@
 let displayLetter = document.querySelector(".displayText"); // where letter display
+let userInput = document.querySelector("textarea"); // where user type
 // selecting key letter in html
 let key = {
   q: document.querySelector(".key-q"),
@@ -39,12 +40,14 @@ let keyReset = (letter) => {
   // delayed before remove class list
   setTimeout(() => {
     letter.classList.remove("key-pressed");
-  }, 600);
+  }, 500);
 };
 
 // display key pressed
-let displayKey = (letter) => {
-  displayLetter.textContent = letter.toUpperCase();
+let displayKey = () => {
+  userInput.addEventListener("input", () => {
+    displayLetter.textContent = userInput.value; // display text based on user type
+  });
 };
 
 // user pressed key
@@ -56,157 +59,157 @@ document.addEventListener("keydown", (e) => {
     case "q":
       keyPress(key.q);
       keyReset(key.q);
-      displayKey(keyPressed);
+      displayKey();
       break;
 
     case "w":
       keyPress(key.w);
       keyReset(key.w);
-      displayKey(keyPressed);
+      displayKey();
       break;
 
     case "e":
       keyPress(key.e);
       keyReset(key.e);
-      displayKey(keyPressed);
+      displayKey();
       break;
 
     case "r":
       keyPress(key.r);
       keyReset(key.r);
-      displayKey(keyPressed);
+      displayKey();
       break;
 
     case "t":
       keyPress(key.t);
       keyReset(key.t);
-      displayKey(keyPressed);
+      displayKey();
       break;
 
     case "y":
       keyPress(key.y);
       keyReset(key.y);
-      displayKey(keyPressed);
+      displayKey();
       break;
 
     case "u":
       keyPress(key.u);
       keyReset(key.u);
-      displayKey(keyPressed);
+      displayKey();
       break;
 
     case "i":
       keyPress(key.i);
       keyReset(key.i);
-      displayKey(keyPressed);
+      displayKey();
       break;
 
     case "o":
       keyPress(key.o);
       keyReset(key.o);
-      displayKey(keyPressed);
+      displayKey();
       break;
 
     case "p":
       keyPress(key.p);
       keyReset(key.p);
-      displayKey(keyPressed);
+      displayKey();
       break;
 
     case "a":
       keyPress(key.a);
       keyReset(key.a);
-      displayKey(keyPressed);
+      displayKey();
       break;
 
     case "s":
       keyPress(key.s);
       keyReset(key.s);
-      displayKey(keyPressed);
+      displayKey();
       break;
 
     case "d":
       keyPress(key.d);
       keyReset(key.d);
-      displayKey(keyPressed);
+      displayKey();
       break;
 
     case "f":
       keyPress(key.f);
       keyReset(key.f);
-      displayKey(keyPressed);
+      displayKey();
       break;
 
     case "g":
       keyPress(key.g);
       keyReset(key.g);
-      displayKey(keyPressed);
+      displayKey();
       break;
 
     case "h":
       keyPress(key.h);
       keyReset(key.h);
-      displayKey(keyPressed);
+      displayKey();
       break;
 
     case "j":
       keyPress(key.j);
       keyReset(key.j);
-      displayKey(keyPressed);
+      displayKey();
       break;
 
     case "k":
       keyPress(key.k);
       keyReset(key.k);
-      displayKey(keyPressed);
+      displayKey();
       break;
 
     case "l":
       keyPress(key.l);
       keyReset(key.l);
-      displayKey(keyPressed);
+      displayKey();
       break;
 
     case "z":
       keyPress(key.z);
       keyReset(key.z);
-      displayKey(keyPressed);
+      displayKey();
       break;
 
     case "x":
       keyPress(key.x);
       keyReset(key.x);
-      displayKey(keyPressed);
+      displayKey();
       break;
 
     case "c":
       keyPress(key.c);
       keyReset(key.c);
-      displayKey(keyPressed);
+      displayKey();
       break;
 
     case "v":
       keyPress(key.v);
       keyReset(key.v);
-      displayKey(keyPressed);
+      displayKey();
       break;
 
     case "b":
       keyPress(key.b);
       keyReset(key.b);
-      displayKey(keyPressed);
+      displayKey();
       break;
 
     case "n":
       keyPress(key.n);
       keyReset(key.n);
-      displayKey(keyPressed);
+      displayKey();
       break;
 
     case "m":
       keyPress(key.m);
       keyReset(key.m);
-      displayKey(keyPressed);
+      displayKey();
       break;
   }
 });
