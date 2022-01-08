@@ -1,5 +1,4 @@
 // Looping
-
 // For Loop
 for (let i = 0; i < 10; i++) {
   console.log(i);
@@ -23,7 +22,7 @@ for (let i = 1; i <= 3; i++) {
   }
 }
 
-// For Each Loop
+// For Each Loop Array
 let num = [1, 2, 3, 4];
 
 num.forEach(function (numbers) {
@@ -50,7 +49,19 @@ for (let row of seatingArrangement) {
   }
 }
 
-// Looping Objects For In
+// For of Object Loop
+let grade = {
+  jose: 80,
+  maria: 82,
+  juan: 90,
+  andres: 100,
+};
+
+for (let score of Object.values(grade)) {
+  console.log(score);
+}
+
+// For in Object Loop
 let grade = {
   jose: 80,
   maria: 82,

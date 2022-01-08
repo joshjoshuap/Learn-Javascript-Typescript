@@ -69,7 +69,19 @@ let fullName = ({ firstname, lastname }) => {
 
 fullName(student);
 
-// Looping Objects For In
+// For of Object Loop
+let grade = {
+  jose: 80,
+  maria: 82,
+  juan: 90,
+  andres: 100,
+};
+
+for (let score of Object.values(grade)) {
+  console.log(score);
+}
+
+// For In Object Loop
 let grade = {
   jose: 80,
   maria: 82,
