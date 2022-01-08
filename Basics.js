@@ -1,13 +1,12 @@
 // Basics
-
 // Changing Value
 let name = "Joshua";
 let age = 0;
-console.log(name + "\n" + age);
+console.log(`name ${age}`);
 
 name = "Josh";
 age = 21;
-console.log(name + "\n" + age);
+console.log(`name ${age}`);
 // Other Syntax
 console.log(name.replace("Joshua", "Josh"));
 
@@ -26,20 +25,20 @@ console.log(`Your name is ${name} Age is ${age} lived in ${city}`);
 
 // Mathematics and Numbers
 let randomNumber = Math.random();
-console.log("Decimal Random: " + randomNumber);
+console.log(`Decimal Random: ${randomNumber}`);
 let wholeNumber = Math.round(randomNumber * 10);
-console.log("Whole Number: " + wholeNumber);
+console.log(`Whole Number:  ${wholeNumber} `);
 let longNumber = Math.round(randomNumber * 99999);
-console.log("Long Random Number: " + longNumber);
+console.log(`Long Random Number: ${longNumber}`);
 
 // lowercase and UPPERCASE
 let name = "JosHuA";
 let lowerCaseName = name.toLowerCase();
 let upperCaseName = name.toUpperCase();
 
-console.log("Normal: " + name);
-console.log("Lowered: " + lowerCaseName);
-console.log("Uppercased: " + upperCaseName);
+console.log(`Normal: ${name}`);
+console.log(`Lowered: ${lowerCaseName}`);
+console.log(`Uppercased: ${upperCaseName}`);
 
 // BMI
 let markHeight = 1.9;
@@ -50,8 +49,8 @@ let johnHeight = 1.8;
 let johnWeight = 92;
 let johnBMI = johnWeight / johnHeight ** 2;
 
-console.log("Mark BMI " + markBMI);
-console.log("John BMI " + johnBMI);
+console.log(`Mark BMI ${markBMI}`);
+console.log(`John BMI ${johnBMI}`);
 
 // Strings Template Literals
 let one = "one";
@@ -67,7 +66,7 @@ let num1 = "1";
 let num2 = "2";
 
 console.log(`Not Converted: ${num1 + num2}`);
-console.log(`Converted: ${parseInt(num1) + parseInt(num2)}`);
+console.log(`Converted: ${Numbers(num1) + Numbers(num2)}`);
 
 // Converting Numbers to String
 let num1 = 1;
