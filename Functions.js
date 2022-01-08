@@ -1,5 +1,4 @@
 // Functions
-
 // Basics
 function HelloWorld() {
   console.log("Hello World");
@@ -27,7 +26,7 @@ function math(userNum1, userNum2) {
   function add(num1, num2) {
     console.log(num1 + num2);
   }
-
+  
   add(userNum1, userNum2);
 }
 

@@ -1,6 +1,5 @@
 // Array
-
-// Basics One Dimensional
+// One Dimensional
 let fruits = ["Apple", "Banana", "Orange"];
 
 console.log(`${fruits[0]} and ${fruits[1]}`);
@@ -12,6 +11,24 @@ let numbers = [
 ];
 
 console.log(`Total: ${numbers[0][0] + numbers[1][0]}`);
+
+// Looping One Dimensional Array
+let numbers = [1, 2, 3, 4, 5];
+
+for (let i = 0; i < numbers.length; i++) {
+  console.log(numbers[i]);
+}
+
+// Looping Two Dimensional Array
+let numbers = [
+  [2, 4, 6, 8, 19],
+  [1, 3, 5, 7, 9],
+];
+for (let i = 0; i < numbers.length; i++) {
+  for (let j = 0; j < numbers[i].length; j++) {
+    console.log(numbers[i][j]);
+  }
+}
 
 // Push
 let numbers = [2, 3, 4, 5];
@@ -34,24 +51,6 @@ var num = [1, 2, 3];
 num.shift(0);
 
 console.log(num);
-
-// Looping One Dimensional Array
-let numbers = [1, 2, 3, 4, 5];
-
-for (let i = 0; i < numbers.length; i++) {
-  console.log(numbers[i]);
-}
-
-// Looping Two Dimensional Array
-let numbers = [
-  [2, 4, 6, 8, 19],
-  [1, 3, 5, 7, 9],
-];
-for (let i = 0; i < numbers.length; i++) {
-  for (let j = 0; j < numbers[i].length; j++) {
-    console.log(numbers[i][j]);
-  }
-}
 
 // Pop and get first array and last array
 let letters = [1, 2, 3, 4, 5];

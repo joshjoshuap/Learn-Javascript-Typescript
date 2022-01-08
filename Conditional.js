@@ -1,5 +1,4 @@
 // Conditional
-
 // If Else
 let age = 18;
 
@@ -30,7 +29,6 @@ if (age <= 2) {
 let name = "Joshua";
 let age = 18;
 let country = "Philippines";
-
 let firstLetterName = name.substring(0, 1);
 
 if (firstLetterName == "J" || firstLetterName == "j") {
