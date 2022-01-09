@@ -117,3 +117,26 @@ if (subject.includes("Math")) {
 } else {
   console.log("Not Exist");
 }
+
+// Spread Operator ...
+let number = [3, 4, 5];
+console.log(number);
+let newNumber = [1, 2, ...number];
+console.log(newNumber);
+let addNumber = [1, 2, ...number, 6, 7];
+console.log(addNumber);
+
+// Multiple Spread Operator
+let firstNum = [1, 2, 3, 4, 5];
+let secondNum = [6, 7, 8, 9, 10];
+let thirdNum = [20, 30, 40];
+
+let combinedNum = [...firstNum, ...secondNum, ...thirdNum];
+console.log(combinedNum);
+
+// Sets
+let name = new Set(["Joshua", "Jose", "Juan", "Jose", "Jose", "Jose", "Jose"]);
+console.log(name);
+for (let person of name) {
+  console.log(person);
+}
