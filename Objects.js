@@ -116,3 +116,24 @@ userInfo["password"] = "12345";
 for (let user in userInfo) {
   console.log(`${user} : ${userInfo[user]}`);
 }
+
+// Array - Objects Combination
+let grade = ["Math", "English", "Science"];
+let gradeInfo = {
+  [grade[0]]: {
+    grade1: 80,
+    grade2: 90,
+  },
+  [grade[1]]: {
+    grade1: 75,
+    grade2: 100,
+  },
+  [grade[2]]: {
+    grade1: 85,
+    grade2: 90,
+  },
+};
+
+console.log(
+  `Your ${grade[0]} Grade is ${gradeInfo.Math.grade1} and ${gradeInfo.Math.grade2}`
+);
