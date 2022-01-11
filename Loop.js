@@ -22,11 +22,23 @@ for (let i = 1; i <= 3; i++) {
   }
 }
 
-// For Each Loop Array
+// For Each Single Array
 let num = [1, 2, 3, 4];
 
-num.forEach(function (numbers) {
-  console.log(numbers);
+num.forEach((numbers, i) => {
+  console.log(`Index ${i + 1} : ${numbers}`);
+});
+
+// For Each Multi Array
+let grades = [
+  ["Math", "Science", "English"],
+  ["90", "80", "20"],
+];
+
+grades.forEach((Items) => {
+  Items.forEach((data) => {
+    console.log(data);
+  });
 });
 
 // For of Single Array
