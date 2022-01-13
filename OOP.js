@@ -182,3 +182,36 @@ console.log('-- Even -- ');
 array1.even();
 console.log('-- ODD -- ');
 array1.odd();
+console.log(object)
+
+// Encapsulation 
+class userInfo {
+  userName = ''; // not private
+  #userPassword = ''; // private
+
+  constructor(username, password, email) {
+    this.userName = username;
+    this.#userPassword = password;
+    this.email = email;
+  }
+
+  displayPassword() {
+    console.log(this.#userPassword); // will run can access #userPassword
+  }
+}
+
+
+class users extends userInfo {
+  displayUserInfo() {
+    console.log(`Username: ${this.userName}\nEmail: ${this.email}`);
+  }
+
+  // error cannot access #userPassword is private
+  displayPassword() {
+    console.log(this.#userPassword);
+  }
+}
+
+let user1 = new users('Josh', '1234', 'josh@email.com');
+user1.displayUserInfo();
+user1.displayPassword();
