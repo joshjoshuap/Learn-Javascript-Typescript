@@ -43,3 +43,31 @@ console.log(
 
 console.log(`Hello ${user1.userFirstName} ${user1.checkAge()}`); // call checkAge prototype
 console.log(`Hello ${user2.userFirstName} ${user2.checkAge()}`);
+
+// Class with Prototype / Method
+class userInfo {
+  constructor(firstName, lastName, age) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.age = age
+  }
+
+  displayInfo() {
+    console.log(`Firstname: ${this.firstName}\nLastName: ${this.lastName}\nAge: ${this.age}`);
+  }
+
+  checkAge() {
+    if (this.age >= 18) {
+      return "You are Allowed";
+    } else {
+      return "Minor not Allowed";
+    }
+  }
+
+  
+}
+
+let user1 = new userInfo('Joshua','Pautanes', 21);
+
+user1.displayInfo();
+console.log(`Hello ${user1.firstName} ${user1.checkAge()}`);
