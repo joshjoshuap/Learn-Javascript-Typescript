@@ -101,7 +101,6 @@ let userInfo = {
 
 let user1 = Object.create(userInfo);
 user1.age = 21; // add age set to 21
-
 user1.addFullname('Joshua', 'Lastname'); // pass data to addFullName method
 
 console.log(`Hello ${user1.firstname} Age ${user1.age}`);
