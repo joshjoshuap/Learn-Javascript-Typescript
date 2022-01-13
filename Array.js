@@ -194,3 +194,13 @@ console.log(name);
 for (let person of name) {
   console.log(person);
 }
+
+// Find Max
+let numbers = [1, 2, 5, 6, 8, 10];
+let findMax = Math.max(...numbers);
+console.log(findMax);
+
+// Find Min
+let numbers = [1, 2, 5, 6, 8, 10];
+let findMin = Math.min(...numbers);
+console.log(findMin);
