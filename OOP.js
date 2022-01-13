@@ -207,9 +207,9 @@ class users extends userInfo {
   }
 
   // error cannot access #userPassword is private
-  displayPassword() {
-    console.log(this.#userPassword);
-  }
+  // displayPassword() {
+  //   console.log(this.#userPassword);
+  // }
 }
 
 let user1 = new users('Josh', '1234', 'josh@email.com');
