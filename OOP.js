@@ -104,3 +104,81 @@ user1.age = 21; // add age set to 21
 user1.addFullname('Joshua', 'Lastname'); // pass data to addFullName method
 
 console.log(`Hello ${user1.firstname} Age ${user1.age}`);
+
+// Inheritance Class
+class studentInfo {
+  constructor(firstname, lastname, grades) {
+   this.firstname = firstname;
+   this.lastname = lastname;
+   this.grades = grades;
+  }
+}
+
+class student1Info extends studentInfo {
+  fullname() {
+    console.log(`${this.firstname} ${this.lastname}`);
+  }
+
+  math() {
+    console.log(`Math : ${this.grades.math}`);
+  }
+
+  science() {
+    console.log(`Science : ${this.grades.science}`)
+  }
+
+  english() {
+    console.log(`English : ${this.grades.english}`)
+  }
+}
+
+let student1 = new student1Info('Joshua', 'Pautanes', {math: 80, science: 90, english: 80});
+student1.fullname();
+student1.math();
+student1.science();
+student1.english();
+
+// Inheritance Class 2 - Callbacks / Value
+class numberArray {
+  constructor(array) {
+    this.array = array;
+  }
+}
+
+class arrayList1 extends numberArray {
+
+  pushArray(val) {
+      this.array.push(val);
+  }
+
+  popArray() {
+    this.array.pop();
+  }
+
+  even() {
+    
+    let even = this.array.filter((arr) => {
+      return arr % 2 === 0;
+    });
+    console.log(even);
+  }
+
+  odd() {
+    let odd = this.array.filter((arr) => {
+      return arr % 2 === 1;
+    });
+    console.log(odd);
+  }
+}
+
+let array1 = new arrayList1([]);
+array1.pushArray(1);
+array1.pushArray(2);
+array1.pushArray(3);
+array1.pushArray(4);
+array1.pushArray(5);
+
+console.log('-- Even -- ');
+array1.even();
+console.log('-- ODD -- ');
+array1.odd();
