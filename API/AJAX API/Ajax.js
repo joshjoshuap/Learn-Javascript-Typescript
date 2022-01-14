@@ -1,18 +1,25 @@
+let display = document.querySelector(".display");
+let btnBTC = document.querySelector(".btc");
+let btnETH = document.querySelector(".eth");
 const req = new XMLHttpRequest();
 
-let btc = () => {
-  req.open("GET", "https://api.cryptonator.com/api/ticker/btc-usd");
+let btcURLAPI = "https://api.cryptonator.com/api/ticker/btc-usd";
+let ethURLAPI = "https://api.cryptonator.com/api/ticker/eth-usd";
+
+let fetchPrice = (url) => {
+  req.open("GET", url);
   req.send();
 
-  req.onload = () => {
-    const data = JSON.parse(this.response);
-    console.log(`${data.ticker.base} Price: ${data.ticker.price} ${data.ticker.target}`);
+  req.onload = function () {
+    const data = JSON.parse(this.response); // converting JSON to Object
+    let dataPrice = `${data.ticker.base} : ${data.ticker.price} ${data.ticker.target}`; // get the value of data
+      display.textContent = dataPrice; // display data price
   };
 
-  req.onerror = () => {
-    console.log("Error", this);
-  }
+  req.onerror = function () {
+    console.log("Error", this); // if fetch failed
+  };
 };
 
-
-btc();
+btnBTC.addEventListener("click", () => fetchPrice(btcURLAPI));
+btnETH.addEventListener("click", () => fetchPrice(ethURLAPI));
