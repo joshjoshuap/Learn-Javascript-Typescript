@@ -200,7 +200,6 @@ class userInfo {
   }
 }
 
-
 class users extends userInfo {
   displayUserInfo() {
     console.log(`Username: ${this.userName}\nEmail: ${this.email}`);
