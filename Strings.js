@@ -40,3 +40,12 @@ if (name.includes(' ')) {
 } else {
   console.log(`Hello ${name}`);
 }
+
+// Trim
+let name1 = '    Joshua';
+let name2 = 'Joshua     ';
+name1.trimStart;
+name2.trimEnd;
+
+console.log(name1);
+console.log(name2);
