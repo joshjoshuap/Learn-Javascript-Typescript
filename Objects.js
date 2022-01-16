@@ -69,7 +69,7 @@ let fullName = ({ firstname, lastname }) => {
 
 fullName(student);
 
-// For of Object Loop
+// Object Loop - For of
 let grade = {
   jose: 80,
   maria: 82,
@@ -81,7 +81,7 @@ for (let score of Object.values(grade)) {
   console.log(score);
 }
 
-// For In Object Loop
+// Object Loop - For in
 let grade = {
   jose: 80,
   maria: 82,
@@ -93,7 +93,37 @@ for (let person in grade) {
   console.log(`${person} : ${grade[person]}`);
 }
 
-// Mapping Array Objects
+// Object Values
+let grade = {
+  jose: 80,
+  maria: 82,
+  juan: 90,
+  andres: 100,
+};
+
+Object.values(grade).forEach((value) => console.log(value));
+
+// Object Keys
+let grade = {
+  jose: 80,
+  maria: 82,
+  juan: 90,
+  andres: 100,
+};
+
+Object.keys(grade).forEach((key) => console.log(`${key} : ${grade[key]}`));
+
+// Object Entries
+let grade = {
+  jose: 80,
+  maria: 82,
+  juan: 90,
+  andres: 100,
+};
+
+Object.entries(grade).forEach((value) => console.log(`${value[0]} : ${value[1]}`));
+
+// Object Mapping Array
 let movies = [
   { title: "a", score: 10 },
   { title: "b", score: 11 },
