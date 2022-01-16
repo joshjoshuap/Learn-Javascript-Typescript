@@ -10,19 +10,25 @@ btnGuess.addEventListener("click", () => {
   if (userInput == randomGuess) {
     guessGuide.textContent = `Congrats you guess the secret number ${randomGuess}`;
     guessGuide.style.color = "green";
-    btnGuess.style.visibility = "hidden";
-    btnReset.style.visibility = "visible";
+    btnGuess.style.visibility = "hidden"; // hide button guess
+    btnReset.style.visibility = "visible"; // show button reset
     userInput.disabled = true;
     btnReset.addEventListener("click", () => {
       location.reload(); // reload whole page if button reset clicked
     });
-  } else if (userInput < randomGuess) {
+  }
+
+  if (userInput < randomGuess) {
     guessGuide.textContent = "Too Low";
     guessGuide.style.color = "red";
-  } else if (userInput > randomGuess) {
+  }
+
+  if (userInput > randomGuess) {
     guessGuide.textContent = "Too High";
     guessGuide.style.color = "blue";
-  } else {
+  }
+
+  if (typeOf(userInput) !== Number) {
     guessGuide.textContent = "Not a number. Please Try Again";
   }
 });

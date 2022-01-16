@@ -1,4 +1,5 @@
 // Dates
+
 // Basics
 let d = new Date();
 console.log(d);
@@ -24,7 +25,7 @@ console.log(`Minutes: ${d.getMinutes()} `);
 // Seconds
 console.log(`Seconds: ${d.getSeconds()} `);
 
-// Date with Switch Case
+// Month - Switch Case
 let month = "";
 switch (d.getMonth() + 1) {
   case 1:
@@ -65,6 +66,7 @@ switch (d.getMonth() + 1) {
     break;
 }
 
+// Day - Switch Case
 let day = "";
 switch (d.getDay()) {
   case 1:

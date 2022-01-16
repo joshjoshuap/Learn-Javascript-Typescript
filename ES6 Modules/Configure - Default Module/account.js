@@ -23,4 +23,4 @@ class accountInfo {
 }
 
 // export default accountInfo; // exporting default
-export { accountInfo as account }; // configure module
+export { accountInfo as account }; // configure module name

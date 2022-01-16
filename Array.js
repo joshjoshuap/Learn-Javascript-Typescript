@@ -1,7 +1,6 @@
 // Array
 // One Dimensional
 let fruits = ["Apple", "Banana", "Orange"];
-
 console.log(`${fruits[0]} and ${fruits[1]}`);
 
 // Multi Dimensional
@@ -50,19 +49,6 @@ console.log(num);
 var num = [1, 2, 3];
 num.shift(0);
 console.log(num);
-
-// Pop and get first array and last array
-let letters = [1, 2, 3, 4, 5];
-console.log(`${letters}`);
-let firstLetter = letters[0];
-let lastLetter = letters[letters.length - 1];
-for (let i = 0; i < letters.length + 4; i++) {
-  letters.shift();
-  letters.pop();
-}
-letters.unshift(firstLetter);
-letters.push(lastLetter);
-console.log(`${letters}`);
 
 // Slice
 let name = ["Joshua", "Juan", "Emilio", "Maria", "Jose"];
@@ -126,7 +112,6 @@ let number = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 let sumOfArrays = number.reduce((previousValue, currentValue) => {
   return previousValue + currentValue;
 });
-
 console.log(sumOfArrays);
 
 // Finding Index
@@ -141,6 +126,16 @@ if (subject.includes("Math")) {
 } else {
   console.log("Not Exist");
 }
+
+// Find Max
+let numbers = [1, 2, 5, 6, 8, 10];
+let findMax = Math.max(...numbers);
+console.log(findMax);
+
+// Find Min
+let numbers = [1, 2, 5, 6, 8, 10];
+let findMin = Math.min(...numbers);
+console.log(findMin);
 
 // Concat Array
 const array1 = ["a", "b", "c"];
@@ -158,25 +153,17 @@ let number = [
   [4, 5, 6],
   [7, 8, 9],
 ];
+
 let oneArray = number.flat();
 console.log(oneArray);
-
-// Sorting Array
-let numbers = [5, 1, 3, 2, 4];
-console.log(numbers.sort());
-
-let negativePositive = [-1, 5, -3, 2, 4, 0, 6, -10];
-let sorted = negativePositive.sort((prevValue, currValue) => {
-  if (prevValue > currValue) return 1;
-  if (currValue > prevValue) return -1;
-});
-console.log(sorted);
 
 // Spread Operator ...
 let number = [3, 4, 5];
 console.log(number);
+
 let newNumber = [1, 2, ...number];
 console.log(newNumber);
+
 let addNumber = [1, 2, ...number, 6, 7];
 console.log(addNumber);
 
@@ -195,12 +182,13 @@ for (let person of name) {
   console.log(person);
 }
 
-// Find Max
-let numbers = [1, 2, 5, 6, 8, 10];
-let findMax = Math.max(...numbers);
-console.log(findMax);
+// Sorting Array
+let numbers = [5, 1, 3, 2, 4];
+console.log(numbers.sort());
 
-// Find Min
-let numbers = [1, 2, 5, 6, 8, 10];
-let findMin = Math.min(...numbers);
-console.log(findMin);
+let negativePositive = [-1, 5, -3, 2, 4, 0, 6, -10];
+let sorted = negativePositive.sort((prevValue, currValue) => {
+  if (prevValue > currValue) return 1;
+  if (currValue > prevValue) return -1;
+});
+console.log(sorted);

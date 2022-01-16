@@ -33,7 +33,7 @@ console.log(
 `
 );
  
- // Prototypes
+ // Prototype / Method
  registerUser.prototype.checkAge = function () {
    if (this.userAge >= 18) {
      return "You are Allowed";

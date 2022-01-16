@@ -1,4 +1,5 @@
 // Basics
+
 // Changing Value
 let name = "Joshua";
 let age = 0;
@@ -16,7 +17,7 @@ let num2 = 2;
 
 console.log(num1 + num2);
 
-// Combining
+// Combining 
 let name = "Joshua";
 let age = 21;
 let city = "Quezon City";
@@ -26,8 +27,10 @@ console.log(`Your name is ${name} Age is ${age} lived in ${city}`);
 // Mathematics and Numbers
 let randomNumber = Math.random();
 console.log(`Decimal Random: ${randomNumber}`);
+
 let wholeNumber = Math.round(randomNumber * 10);
 console.log(`Whole Number:  ${wholeNumber} `);
+
 let longNumber = Math.round(randomNumber * 99999);
 console.log(`Long Random Number: ${longNumber}`);
 
@@ -39,18 +42,6 @@ let upperCaseName = name.toUpperCase();
 console.log(`Normal: ${name}`);
 console.log(`Lowered: ${lowerCaseName}`);
 console.log(`Uppercased: ${upperCaseName}`);
-
-// BMI
-let markHeight = 1.9;
-let markWeight = 78;
-let markBMI = markWeight / markHeight ** 2;
-
-let johnHeight = 1.8;
-let johnWeight = 92;
-let johnBMI = johnWeight / johnHeight ** 2;
-
-console.log(`Mark BMI ${markBMI}`);
-console.log(`John BMI ${johnBMI}`);
 
 // Strings Template Literals
 let one = "one";

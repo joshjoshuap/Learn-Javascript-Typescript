@@ -1,5 +1,6 @@
 let displayLetter = document.querySelector(".displayText"); // where letter display
 let userInput = document.querySelector("textarea"); // where user type
+
 // selecting key letter in html
 let key = {
   q: document.querySelector(".key-q"),

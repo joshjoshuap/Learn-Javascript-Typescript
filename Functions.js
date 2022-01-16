@@ -1,4 +1,5 @@
 // Functions
+
 // Basics
 function HelloWorld() {
   console.log("Hello World");
@@ -56,34 +57,6 @@ let subtract = (num1, num2) => {
 add(1, 2);
 subtract(2, 2);
 
-// Calling Other Function
-let hello = (userName) => {
-  return "Hello " + userName;
-};
-
-let greet = (inputName) => {
-  console.log(hello(inputName));
-};
-
-greet("Joshua");
-
-// Function calling Function
-let calcAverage = (score1, score2, score3) => {
-  return (score1 + score2 + score3) / 3;
-};
-
-let checkPassed = (grade1, grade2, grade3) => {
-  let totalGrade = calcAverage(grade1, grade2, grade3);
-
-  if (totalGrade >= 75) {
-    console.log(`You Passed Grade: ${totalGrade}`);
-  } else {
-    console.log(`You Failed Grade: ${totalGrade}`);
-  }
-};
-
-checkPassed(80, 85, 100);
-
 // Default Parameters, Values
 let personGrade = (name, grades = 0, status = "No Grade") => {
   let person = {
@@ -114,7 +87,35 @@ let studentInfo = (name, grades) => {
 
 studentInfo(studentName, subjectGrade);
 
-// Function Calling Function - Part 2
+// Calling Other Function
+let hello = (userName) => {
+  return "Hello " + userName;
+};
+
+let greet = (inputName) => {
+  console.log(hello(inputName));
+};
+
+greet("Joshua");
+
+// Function calling Function
+let calcAverage = (score1, score2, score3) => {
+  return (score1 + score2 + score3) / 3;
+};
+
+let checkPassed = (grade1, grade2, grade3) => {
+  let totalGrade = calcAverage(grade1, grade2, grade3);
+
+  if (totalGrade >= 75) {
+    console.log(`You Passed Grade: ${totalGrade}`);
+  } else {
+    console.log(`You Failed Grade: ${totalGrade}`);
+  }
+};
+
+checkPassed(80, 85, 100);
+
+// Function Calling Function - Example 2
 let addition = (userNums) => {
   let num1 = userNums.num1;
   let num2 = userNums.num2;

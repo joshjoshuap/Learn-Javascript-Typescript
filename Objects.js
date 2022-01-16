@@ -167,3 +167,17 @@ let gradeInfo = {
 console.log(
   `Your ${grade[0]} Grade is ${gradeInfo.Math.grade1} and ${gradeInfo.Math.grade2}`
 );
+
+// Object Create
+let userInfo = {
+  addFullname(firstname, lastname) {
+    this.firstname = firstname;
+    this.lastname = lastname
+  }
+};
+
+let user1 = Object.create(userInfo);
+user1.age = 21; // add age set to 21
+user1.addFullname('Joshua', 'Lastname'); // pass data to addFullName method
+
+console.log(`Hello ${user1.firstname} Age ${user1.age}`);

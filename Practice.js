@@ -1,5 +1,3 @@
-// --- MULTI DIMENSIONAL LOOPING ARRAY ---
-
 // USING FOR
 let grades = [
   ["Math", "Science", "English"],
@@ -164,3 +162,28 @@ let checkPassed = (grade1, grade2, grade3) => {
 };
 
 checkPassed(80, 85, 100);
+
+// Pop and get first array and last array
+let letters = [1, 2, 3, 4, 5];
+console.log(`${letters}`);
+let firstLetter = letters[0];
+let lastLetter = letters[letters.length - 1];
+for (let i = 0; i < letters.length + 4; i++) {
+  letters.shift();
+  letters.pop();
+}
+letters.unshift(firstLetter);
+letters.push(lastLetter);
+console.log(`${letters}`);
+
+// BMI
+let markHeight = 1.9;
+let markWeight = 78;
+let markBMI = markWeight / markHeight ** 2;
+
+let johnHeight = 1.8;
+let johnWeight = 92;
+let johnBMI = johnWeight / johnHeight ** 2;
+
+console.log(`Mark BMI ${markBMI}`);
+console.log(`John BMI ${johnBMI}`);

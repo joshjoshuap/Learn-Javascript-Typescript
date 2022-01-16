@@ -1,6 +1,6 @@
 // import accountInfo from "./account.js"; // importing default export and configure name
 
-import { account } from "./account.js"; // importing change named
+import { account } from "./account.js"; // importing changed named
 let display = document.querySelector(".display");
 
 let user1 = new account(
