@@ -141,3 +141,37 @@ let nums = {
   num2: 3,
 };
 solveMath("sub", nums);
+
+// Execution Context
+let displayName = () => {
+  return console.log("Joshua");
+};
+
+let searchName = () => {
+  return displayName();
+};
+
+let myName = () => {
+  return searchName();
+};
+
+myName();
+
+// Function Expression - Declaration
+// Expression
+let name = "Joshua";
+displayName(); // error can't access displayName
+
+let displayName = () => {
+  console.log(name);
+};
+displayName(); // can access displayName
+
+// Declaration - Both can access displayName
+let name = "Joshua";
+displayName();
+
+function displayName() {
+  console.log(name);
+}
+displayName();
