@@ -175,3 +175,49 @@ function displayName() {
   console.log(name);
 }
 displayName();
+
+// Call
+let person1 = {
+  name: "Juan",
+  age: 0,
+  mathGrade: 80,
+  grade() {
+    return (this.mathGrade = 100);
+  },
+};
+
+let person2 = {
+  name: "Joshua",
+  age: 99,
+  mathGrade: 0,
+};
+
+person1.grade.call(person2); // make a copy of grade() value to person2 mathGrade
+console.log(`Name: ${person2.name} Grade: ${person2.mathGrade}`);
+
+// Apply
+let person1 = {
+  name: "Juan",
+  age: 0,
+  mathGrade: 80,
+  grade(grades) {
+    return (this.mathGrade = grades);
+  },
+};
+
+let person2 = {
+  name: "Joshua",
+  age: 99,
+  mathGrade: 0,
+};
+
+person1.grade.apply(person2, [100]); // pass the value of 100 to grade() and make copy to person 2 math grade
+console.log(`Name: ${person2.name} Grade: ${person2.mathGrade}`);
+
+// Bind
+function add(num1, num2) {
+  return console.log(num1 + num2); // 5
+}
+
+let addNumber = add.bind(this, 3); // this = addNumber(2), num1 = 2 num2 = 3.
+addNumber(2);
