@@ -38,3 +38,16 @@ let user1 = new registerUser(
 );
 
 console.log(`Username: ${user1.username}\nPassword: ${user1.password}`);
+
+// Calling function
+let person = {
+  name: 'Joshua',
+  displayName() {
+    return console.log(this.name);
+  },
+  whatIsMyName() {
+    return this.displayName();
+  }
+}
+
+person.whatIsMyName(); 
