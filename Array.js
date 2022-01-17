@@ -186,9 +186,13 @@ for (let person of name) {
 let numbers = [5, 1, 3, 2, 4];
 console.log(numbers.sort());
 
-let negativePositive = [-1, 5, -3, 2, 4, 0, 6, -10];
+let negativePositive = [-1, 5, -3, 2, 4, 0, 6, -10]; // sorting with negative numbers
 let sorted = negativePositive.sort((prevValue, currValue) => {
   if (prevValue > currValue) return 1;
   if (currValue > prevValue) return -1;
 });
 console.log(sorted);
+
+// Fill array
+let numberArray = new Array(5).fill('a');
+console.log(numberArray);
