@@ -180,9 +180,9 @@ array1.pushArray(5);
 
 console.log('-- Even -- ');
 array1.even();
+
 console.log('-- ODD -- ');
 array1.odd();
-console.log(object)
 
 // Encapsulation 
 class userInfo {
