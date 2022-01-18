@@ -221,3 +221,22 @@ function add(num1, num2) {
 
 let addNumber = add.bind(this, 3); // this = addNumber(2), num1 = 2 num2 = 3.
 addNumber(2);
+
+// Currying
+let fullName = (firstName) => (lastName) => console.log(`${firstName} ${lastName}`);
+fullName('Joshua')('Pautanes');
+
+let addTwoNumber = (num1) => (num2) => console.log(num1 + num2); // num1 = 2, num2 = 3
+addTwoNumber(2)(3); // 5
+
+let add = (num1) => (num2) => console.log(num1 + num2); // num1 = 5 num2 = 5, num1 = 10 num2 = 5
+let addByFive = add(5) // add (5)(5)
+let addByTen = add(10); // add(10)(5)
+
+addByFive(5);
+addByTen(5);
+
+// Partial
+let addNumbers = (num1, num2, num3) => console.log(num1 + num2 + num3); // num1 = 10 num2 = 3 num3 = 5
+let addToTen = addNumbers.bind(null, 10); // addNumber(10, 3, 5)
+addToTen(3, 5); // 18
