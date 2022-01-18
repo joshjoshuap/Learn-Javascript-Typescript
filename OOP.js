@@ -184,6 +184,39 @@ array1.even();
 console.log('-- ODD -- ');
 array1.odd();
 
+// Inheritance Class - Super
+class studentData {
+  constructor(firstname, middlename, lastname) {
+    this.firstname = firstname;
+    this.middlename = middlename;
+    this.lastname = lastname;
+  }
+}
+
+class student1Info extends studentData { // extending to student data
+  displayInfo() {
+    return `${this.firstname} ${this.middlename} ${this.lastname}`;
+  }
+}
+
+class student2Info extends studentData { // extending to student data
+  // create new paramater suffix
+  constructor(firstname, middlename, lastname, suffix) {
+    super(firstname, middlename, lastname); // get data from studentData
+    this.suffix = suffix;
+  }
+
+  displayInfo() {
+    return `${this.firstname} ${this.middlename} ${this.lastname} ${this.suffix}`;
+  }
+}
+
+let student1 = new student1Info("Joshua", "E", "Pautanes");
+let student2 = new student2Info("Jose", "Mercado", "Rizal", "Jr.");
+
+console.log(student1.displayInfo());
+console.log(student2.displayInfo());
+
 // Encapsulation 
 class userInfo {
   userName = ''; // not private
@@ -196,8 +229,16 @@ class userInfo {
   }
 
   displayPassword() {
+    this.#privateMethod(); // caling private method
     console.log(this.#userPassword); // will run can access #userPassword
   }
+
+  // Private method inside userInfo can access
+  #privateMethod(){
+    return this.#userPassword = 'Password Hacked!';
+  }
+
+
 }
 
 class users extends userInfo {
