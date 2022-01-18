@@ -19,3 +19,23 @@ userLogin("admin", "admin") // username, password
     // calling throw
     console.log("Failed: ", err);
   });
+
+// Async Await
+let displayName = (name) => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      console.log(name);
+      resolve();
+    }, 1000);
+  });
+};
+
+let display = async () => {
+  await displayName('Joshua');
+  await displayName('Juan');
+  await displayName('Jose');
+  await displayName('Maria');
+  await displayName('Emilio');
+}
+
+display();
