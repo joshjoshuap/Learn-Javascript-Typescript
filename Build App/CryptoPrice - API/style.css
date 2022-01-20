@@ -37,8 +37,5 @@ th {
 td {
   font-size: 18px;
   padding: 10px;
-}
-
-td.change {
-  font-weight: 700;
+  font-weight: 600;
 }

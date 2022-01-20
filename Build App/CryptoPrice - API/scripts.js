@@ -1,3 +1,4 @@
+// Selecting Query
 let BTC = document.querySelectorAll(".btc");
 let ETH = document.querySelectorAll(".eth");
 let XRP = document.querySelectorAll(".xrp");
@@ -27,13 +28,15 @@ fetchCrypto = async (APIurl) => {
 
 // crypto = BTC, ETH, XRP. data = api res.json
 let displayCrypto = (crypto, data) => {
+  // loop data object value
   data.map(function (coin) {
-    crypto[0].textContent = coin.name;
-    crypto[1].textContent = coin.symbol;
-    crypto[2].textContent = coin.price_usd;
-    crypto[3].textContent = coin.percent_change_7d;
-    crypto[4].textContent = coin.percent_change_24h;
-    crypto[5].textContent = coin.volume24;
+    // display value
+    crypto[0].textContent = coin.name; // Name
+    crypto[1].textContent = coin.symbol; // Coin
+    crypto[2].textContent = coin.price_usd; // Price
+    crypto[3].textContent = coin.percent_change_7d; // 7d
+    crypto[4].textContent = coin.percent_change_24h; // 24h
+    crypto[5].textContent = coin.volume24; // Volume
 
     // change color of changes
     coin.percent_change_7d > 0
