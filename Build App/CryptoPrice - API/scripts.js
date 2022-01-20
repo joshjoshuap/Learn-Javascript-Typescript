@@ -1,8 +1,8 @@
-let descBTC = document.querySelectorAll(".desc-btc");
-let descETH = document.querySelectorAll(".desc-eth");
-let descXRP = document.querySelectorAll(".desc-xrp");
-let descBNB = document.querySelectorAll(".desc-bnb");
-let descUSDT = document.querySelectorAll(".desc-usdt");
+let BTC = document.querySelectorAll(".btc");
+let ETH = document.querySelectorAll(".eth");
+let XRP = document.querySelectorAll(".xrp");
+let BNB = document.querySelectorAll(".bnb");
+let USDT = document.querySelectorAll(".usdt");
 
 // Crypto API Url
 let cryptoAPI = {
@@ -25,124 +25,49 @@ fetchCrypto = async (APIurl) => {
   }
 };
 
+// crypto = BTC, ETH, XRP. data = api res.json
+let displayCrypto = (crypto, data) => {
+  data.map(function (coin) {
+    crypto[0].textContent = coin.name;
+    crypto[1].textContent = coin.symbol;
+    crypto[2].textContent = coin.price_usd;
+    crypto[3].textContent = coin.percent_change_7d;
+    crypto[4].textContent = coin.percent_change_24h;
+    crypto[5].textContent = coin.volume24;
+
+    // change color of changes
+    coin.percent_change_7d > 0
+      ? (crypto[3].style.color = "green")
+      : (crypto[3].style.color = "red");
+    coin.percent_change_24h > 0
+      ? (crypto[4].style.color = "green")
+      : (crypto[4].style.color = "red");
+  });
+};
+
 // BTC
 fetchCrypto(cryptoAPI.btc).then((data) => {
-  data.map(function (coin) {
-    descBTC[0].textContent = coin.name;
-    descBTC[1].textContent = coin.symbol;
-    descBTC[2].textContent = coin.price_usd;
-    descBTC[3].textContent = coin.percent_change_7d;
-    descBTC[4].textContent = coin.percent_change_24h;
-    descBTC[5].textContent = coin.volume24;
-
-    if (coin.percent_change_7d >= 0.1) {
-      descBTC[3].style.color = "green";
-    } else {
-      descBTC[3].style.color = "red";
-    }
-
-    if (coin.percent_change_24h >= 0.1) {
-      descBTC[4].style.color = "green";
-    } else {
-      descBTC[4].style.color = "red";
-    }
-  });
+  displayCrypto(BTC, data); // pass value to diplayCrypto
 });
 
 // ETH
 fetchCrypto(cryptoAPI.eth).then((data) => {
-  data.map(function (coin) {
-    descETH[0].textContent = coin.name;
-    descETH[1].textContent = coin.symbol;
-    descETH[2].textContent = coin.price_usd;
-    descETH[3].textContent = coin.percent_change_7d;
-    descETH[4].textContent = coin.percent_change_24h;
-    descETH[5].textContent = coin.volume24;
-    
-    if (coin.percent_change_7d >= 0.1) {
-      descETH[3].style.color = "green";
-    } else {
-      descETH[3].style.color = "red";
-    }
-
-    if (coin.percent_change_24h >= 0.1) {
-      descETH[4].style.color = "green";
-    } else {
-      descETH[4].style.color = "red";
-    }
-  });
+  displayCrypto(ETH, data);
 });
 
 // XRP
 fetchCrypto(cryptoAPI.xrp).then((data) => {
-  data.map(function (coin) {
-    descXRP[0].textContent = coin.name;
-    descXRP[1].textContent = coin.symbol;
-    descXRP[2].textContent = coin.price_usd;
-    descXRP[3].textContent = coin.percent_change_7d;
-    descXRP[4].textContent = coin.percent_change_24h;
-    descXRP[5].textContent = coin.volume24;
-    
-    if (coin.percent_change_7d >= 0.1) {
-      descXRP[3].style.color = "green";
-    } else {
-      descXRP[3].style.color = "red";
-    }
-
-    if (coin.percent_change_24h >= 0.1) {
-      descXRP[4].style.color = "green";
-    } else {
-      descXRP[4].style.color = "red";
-    }
-  });
+  displayCrypto(XRP, data);
 });
 
 // BNB
 fetchCrypto(cryptoAPI.bnb).then((data) => {
-  data.map(function (coin) {
-    descBNB[0].textContent = coin.name;
-    descBNB[1].textContent = coin.symbol;
-    descBNB[2].textContent = coin.price_usd;
-    descBNB[3].textContent = coin.percent_change_7d;
-    descBNB[4].textContent = coin.percent_change_24h;
-    descBNB[5].textContent = coin.volume24;
-    
-    if (coin.percent_change_7d >= 0.1) {
-      descBNB[3].style.color = "green";
-    } else {
-      descBNB[3].style.color = "red";
-    }
-
-    if (coin.percent_change_24h >= 0.1) {
-      descBNB[4].style.color = "green";
-    } else {
-      descBNB[4].style.color = "red";
-    }
-  });
+  displayCrypto(BNB, data);
 });
 
 // USDT
 fetchCrypto(cryptoAPI.usdt).then((data) => {
-  data.map(function (coin) {
-    descUSDT[0].textContent = coin.name;
-    descUSDT[1].textContent = coin.symbol;
-    descUSDT[2].textContent = coin.price_usd;
-    descUSDT[3].textContent = coin.percent_change_7d;
-    descUSDT[4].textContent = coin.percent_change_24h;
-    descUSDT[5].textContent = coin.volume24;
-
-    if (coin.percent_change_7d >= 0.1) {
-      descUSDT[3].style.color = "green";
-    } else {
-      descUSDT[3].style.color = "red";
-    }
-
-    if (coin.percent_change_24h >= 0.1) {
-      descUSDT[4].style.color = "green";
-    } else {
-      descUSDT[4].style.color = "red";
-    }
-  });
+  displayCrypto(USDT, data);
 });
 
 // Btc - 90
