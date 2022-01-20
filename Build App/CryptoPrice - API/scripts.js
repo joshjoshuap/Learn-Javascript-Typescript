@@ -1,12 +1,16 @@
 let descBTC = document.querySelectorAll(".desc-btc");
 let descETH = document.querySelectorAll(".desc-eth");
 let descXRP = document.querySelectorAll(".desc-xrp");
+let descBNB = document.querySelectorAll(".desc-bnb");
+let descUSDT = document.querySelectorAll(".desc-usdt");
 
 // Crypto API Url
 let cryptoAPI = {
   btc: "https://api.coinlore.net/api/ticker/?id=90",
   eth: "https://api.coinlore.net/api/ticker/?id=80",
-  xrp: "https://api.coinlore.net/api/ticker/?id=58"
+  xrp: "https://api.coinlore.net/api/ticker/?id=58",
+  bnb: "https://api.coinlore.net/api/ticker/?id=2710",
+  usdt: "https://api.coinlore.net/api/ticker/?id=518"
 }
 
 // Fetching Crypto
@@ -46,6 +50,24 @@ fetchCrypto(cryptoAPI.xrp).then((data) => {
     descXRP[0].textContent = coin.name;
     descXRP[1].textContent = coin.symbol;
     descXRP[2].textContent = coin.price_usd;
+  })
+});
+
+// BNB
+fetchCrypto(cryptoAPI.bnb).then((data) => {
+  data.map(function (coin) {
+    descBNB[0].textContent = coin.name;
+    descBNB[1].textContent = coin.symbol;
+    descBNB[2].textContent = coin.price_usd;
+  })
+});
+
+// USDT
+fetchCrypto(cryptoAPI.usdt).then((data) => {
+  data.map(function (coin) {
+    descUSDT[0].textContent = coin.name;
+    descUSDT[1].textContent = coin.symbol;
+    descUSDT[2].textContent = coin.price_usd;
   })
 });
 

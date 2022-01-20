@@ -1,3 +1,7 @@
+body {
+  font-family: "Courier New", Courier, monospace;
+}
+
 .icon {
   height: 32px;
   width: 32px;
@@ -8,11 +12,29 @@
   margin: 0 auto;
 }
 
-table {
+.main-title {
+  font-size: 48px;
+  padding: 10px;
   text-align: center;
+}
+
+table {
+  background-color: #f7f7f7;
   width: 100%;
+  padding: 20px 100px 20px 100px;
+  border-radius: 20px;
+  box-shadow: 0px 1.3px 2.7px rgba(0, 0, 0, 0.051),
+    0px 3.3px 6.9px rgba(0, 0, 0, 0.062), 0px 6.7px 14.2px rgba(0, 0, 0, 0.073),
+    0px 13.9px 29.2px rgba(0, 0, 0, 0.086), 0px 38px 80px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+th {
+  font-size: 32px;
+  font-weight: 900;
 }
 
 td {
+  font-size: 18px;
   padding: 10px;
 }
