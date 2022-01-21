@@ -4,6 +4,9 @@ let ETH = document.querySelectorAll(".eth");
 let XRP = document.querySelectorAll(".xrp");
 let BNB = document.querySelectorAll(".bnb");
 let USDT = document.querySelectorAll(".usdt");
+let USDC = document.querySelectorAll(".usdc");
+let DOGE = document.querySelectorAll(".doge");
+let AXS = document.querySelectorAll(".axs");
 
 // Crypto API Url
 let cryptoAPI = {
@@ -12,6 +15,9 @@ let cryptoAPI = {
   xrp: "https://api.coinlore.net/api/ticker/?id=58",
   bnb: "https://api.coinlore.net/api/ticker/?id=2710",
   usdt: "https://api.coinlore.net/api/ticker/?id=518",
+  usdc: "https://api.coinlore.net/api/ticker/?id=33285",
+  doge: "https://api.coinlore.net/api/ticker/?id=2",
+  axs: "https://api.coinlore.net/api/ticker/?id=46575"
 };
 
 // Fetching Crypto
@@ -26,6 +32,24 @@ fetchCrypto = async (APIurl) => {
   }
 };
 
+// Volume Minimize
+function abbreviateNumber(value) {
+  var newValue = value;
+  if (value >= 1000) {
+      var suffixes = ["", "k", "m", "b","t"];
+      var suffixNum = Math.floor( (""+value).length/3 );
+      var shortValue = '';
+      for (var precision = 2; precision >= 1; precision--) {
+          shortValue = parseFloat( (suffixNum != 0 ? (value / Math.pow(1000,suffixNum) ) : value).toPrecision(precision));
+          var dotLessShortValue = (shortValue + '').replace(/[^a-zA-Z 0-9]+/g,'');
+          if (dotLessShortValue.length <= 2) { break; }
+      }
+      if (shortValue % 1 != 0)  shortValue = shortValue.toFixed(1);
+      newValue = shortValue+suffixes[suffixNum];
+  }
+  return newValue;
+}
+
 // crypto = BTC, ETH, XRP. data = api res.json
 let displayCrypto = (crypto, data) => {
   // loop data object value
@@ -34,9 +58,9 @@ let displayCrypto = (crypto, data) => {
     crypto[0].textContent = coin.name; // Name
     crypto[1].textContent = coin.symbol; // Coin
     crypto[2].textContent = coin.price_usd; // Price
-    crypto[3].textContent = coin.percent_change_7d; // 7d
-    crypto[4].textContent = coin.percent_change_24h; // 24h
-    crypto[5].textContent = coin.volume24; // Volume
+    crypto[3].textContent = coin.percent_change_7d + "%"; // 7d
+    crypto[4].textContent = coin.percent_change_24h + "%"; // 24h
+    crypto[5].textContent = abbreviateNumber(Math.floor(coin.volume24)); // Volume
 
     // change color of changes
     coin.percent_change_7d > 0
@@ -73,13 +97,17 @@ fetchCrypto(cryptoAPI.usdt).then((data) => {
   displayCrypto(USDT, data);
 });
 
-// Btc - 90
-// eth - 80
-// bnb - 2710
-// usdt - 518
-// ada - 257
-// sol - 48543
-// usdc - 33285
-// lunna - 48537
-// xrp - 58
-// doge - 2
+// USDC
+fetchCrypto(cryptoAPI.usdc).then((data) => {
+  displayCrypto(USDC, data);
+});
+
+// DOGE
+fetchCrypto(cryptoAPI.doge).then((data) => {
+  displayCrypto(DOGE, data);
+});
+
+// Axie
+fetchCrypto(cryptoAPI.axs).then((data) => {
+  displayCrypto(AXS, data);
+});
