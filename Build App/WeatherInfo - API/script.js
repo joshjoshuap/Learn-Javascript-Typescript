@@ -32,12 +32,12 @@ fetchWeather = async (APIurl) => {
 };
 
 let displayCurrent = (current, country, city) => {
-  currentIMG.src = current.condition.icon;
-  currentDate.textContent = `${city},${country}`;
-  currentDesc[0].textContent = current.condition.text;
-  currentDesc[1].textContent = `Celsius: ${current.temp_c}`;
-  currentDesc[2].textContent = `Wind: ${current.wind_kph} kph`;
-  currentDesc[3].textContent = `Humidity: ${current.humidity}`;
+  currentIMG.src = current.condition.icon; // icon
+  currentDate.textContent = `${city},${country}`; // city-country
+  currentDesc[0].textContent = current.condition.text; // weather status
+  currentDesc[1].textContent = `Celsius: ${current.temp_c}`; // celsius
+  currentDesc[2].textContent = `Wind: ${current.wind_kph} kph`; // wind
+  currentDesc[3].textContent = `Humidity: ${current.humidity}`; // humidty
 };
 
 let displayDay1 = (day1) => {
@@ -72,7 +72,7 @@ let displayDay3 = (day3) => {
 
 // Get User Location
 $.getJSON("https://api.ipregistry.co?key=zz5cvl90qllv3iec", function (data) {
-  let userData = JSON.parse(JSON.stringify(data, null, 2));
+  let userData = JSON.parse(JSON.stringify(data, null, 2)); // getting fetch data user location convert to object
   userCountry = userData.location.country.name; // user country
   userCity = userData.location.city; // user city
   let userWeatherAPI = `http://api.weatherapi.com/v1/forecast.json?key=c806d1c957904ce9b4d71346222201&q=${userCountry}&days=10&aqi=no&alerts=no`;
@@ -85,3 +85,10 @@ $.getJSON("https://api.ipregistry.co?key=zz5cvl90qllv3iec", function (data) {
     displayDay3(data.forecast.forecastday[2]);
   });
 });
+
+/* 
+Documentation:
+Weather: https://www.weatherapi.com/api-explorer.aspx#forecast
+User Location: https://ipregistry.co/
+Stackoerflow: https://stackoverflow.com/questions/391979/how-to-get-clients-ip-address-using-javascript
+*/
