@@ -1,0 +1,62 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.container {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  padding: 20px;
+  background-color: #EAEAEA;
+  color: black;
+  border-radius: 8px;
+  box-shadow: 10px 10px 10px #99A799;
+
+}
+
+.current {
+  display: flex;
+  gap: 20px;
+}
+
+.current-info {
+  padding: 20px 0px 20px 50px;
+  line-height: 1;
+}
+
+.location {
+  padding: 20px;
+  text-align: center;
+}
+
+.location > img {
+  height: 80px;
+  width: 80px;
+}
+
+.days {
+  display: flex;
+  gap: 50px;
+  padding: 10px;
+}
+
+.day {
+ text-align: center;
+}
+
+.day > img {
+  height: 48px;
+  width: 48px;
+}
