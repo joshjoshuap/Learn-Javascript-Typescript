@@ -8,6 +8,7 @@ if (age >= 18) {
 } else {
   console.log("Minor not allowed");
 }
+/* You are allowed */
 
 // Nested If Else
 let age = 1;
@@ -25,6 +26,7 @@ if (age <= 2) {
 } else {
   console.log("Meh?? Invalid Age");
 }
+/* Hello Baby */
 
 // Multiple Nested If Else
 let name = "Joshua";
@@ -49,6 +51,11 @@ if (firstLetterName == "J" || firstLetterName == "j") {
 } else {
   console.log("Sorry Only Name that starts in letter J Accepted");
 }
+/* 
+Hello "J"
+How are you?
+Welcome Back to the Philippines Joshua
+*/
 
 // Switch Case
 let OnetoFive = Math.round(Math.random() * 5 + 1);
@@ -69,6 +76,7 @@ switch (OnetoFive) {
   case 5:
     console.log("Number 5");
 }
+// Number 5
 
 // Ternary Operator
 let username = "admin";
@@ -80,3 +88,4 @@ let ifMatched =
     : "Not Matched";
 
 console.log(ifMatched);
+// Username and Password Matched

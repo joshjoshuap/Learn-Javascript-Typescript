@@ -19,6 +19,7 @@ userLogin("admin", "admin") // username, password
     // calling throw
     console.log("Failed: ", err);
   });
+// Success:  Successfully Login
 
 // Async Await
 let displayName = (name) => {
@@ -31,11 +32,11 @@ let displayName = (name) => {
 };
 
 let display = async () => {
-  await displayName('Joshua');
-  await displayName('Juan');
-  await displayName('Jose');
-  await displayName('Maria');
-  await displayName('Emilio');
-}
+  await displayName("Joshua");
+  await displayName("Juan");
+  await displayName("Jose");
+  await displayName("Maria");
+  await displayName("Emilio");
+};
 
 display();

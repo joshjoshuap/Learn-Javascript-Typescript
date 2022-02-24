@@ -5,7 +5,7 @@ function HelloWorld() {
   console.log("Hello World");
 }
 
-HelloWorld();
+HelloWorld(); // Hello World
 
 // Return Function
 function sum(num1, num2) {
@@ -13,14 +13,14 @@ function sum(num1, num2) {
   return total;
 }
 
-console.log(sum(1, 3));
+console.log(sum(1, 3)); // 1 + 3 = 4
 
 // Parameters
 function person(FirstName, LastName) {
   console.log(`${FirstName} ${LastName}`);
 }
 
-person("Joshua", "Pautanes");
+person("Joshua", "Pautanes"); // Joshua Pautanes
 
 // Nested Function
 function math(userNum1, userNum2) {
@@ -31,7 +31,7 @@ function math(userNum1, userNum2) {
   add(userNum1, userNum2);
 }
 
-math(2, 2);
+math(2, 2); // 4
 
 // Function inside object
 let math = {
@@ -43,7 +43,7 @@ let math = {
   },
 };
 
-math.sum(1, 2);
+math.sum(1, 2); // 3
 
 // Arrow Function
 let add = (num1, num2) => {
@@ -54,8 +54,8 @@ let subtract = (num1, num2) => {
   console.log(num1 - num2);
 };
 
-add(1, 2);
-subtract(2, 2);
+add(1, 2); // 3
+subtract(2, 2); // 0
 
 // Default Parameters, Values
 let personGrade = (name, grades = 0, status = "No Grade") => {
@@ -69,7 +69,7 @@ let personGrade = (name, grades = 0, status = "No Grade") => {
   );
 };
 
-personGrade("Joshua");
+personGrade("Joshua"); // Hello Joshua your grade is 0 means No Grade
 
 // Passing Objects in Parameters
 let studentName = "Joshua";
@@ -85,7 +85,7 @@ let studentInfo = (name, grades) => {
   console.log(`Hello ${student} your total grade is ${average}`);
 };
 
-studentInfo(studentName, subjectGrade);
+studentInfo(studentName, subjectGrade); // Hello Joshua your total grade is 90
 
 // Calling Other Function
 let hello = (userName) => {
@@ -96,7 +96,7 @@ let greet = (inputName) => {
   console.log(hello(inputName));
 };
 
-greet("Joshua");
+greet("Joshua"); // Hello Joshua
 
 // Function calling Function
 let calcAverage = (score1, score2, score3) => {
@@ -113,7 +113,7 @@ let checkPassed = (grade1, grade2, grade3) => {
   }
 };
 
-checkPassed(80, 85, 100);
+checkPassed(80, 85, 100); // You Passed Grade: 88.33333333333333
 
 // Function Calling Function - Example 2
 let addition = (userNums) => {
@@ -140,7 +140,7 @@ let nums = {
   num1: 2,
   num2: 3,
 };
-solveMath("sub", nums);
+solveMath("sub", nums); // -1
 
 // Execution Context
 let displayName = () => {
@@ -155,7 +155,7 @@ let myName = () => {
   return searchName();
 };
 
-myName();
+myName(); // Joshua
 
 // Function Expression - Declaration
 // Expression
@@ -193,7 +193,7 @@ let person2 = {
 };
 
 person1.grade.call(person2); // make a copy of grade() value to person2 mathGrade
-console.log(`Name: ${person2.name} Grade: ${person2.mathGrade}`);
+console.log(`Name: ${person2.name} Grade: ${person2.mathGrade}`); // Name: Joshua Grade: 100
 
 // Apply
 let person1 = {
@@ -212,7 +212,7 @@ let person2 = {
 };
 
 person1.grade.apply(person2, [100]); // pass the value of 100 to grade() and make copy to person 2 math grade
-console.log(`Name: ${person2.name} Grade: ${person2.mathGrade}`);
+console.log(`Name: ${person2.name} Grade: ${person2.mathGrade}`); // Name: Joshua Grade: 100
 
 // Bind
 function add(num1, num2) {
@@ -223,14 +223,15 @@ let addNumber = add.bind(this, 3); // this = addNumber(2), num1 = 2 num2 = 3.
 addNumber(2);
 
 // Currying
-let fullName = (firstName) => (lastName) => console.log(`${firstName} ${lastName}`);
-fullName('Joshua')('Pautanes');
+let fullName = (firstName) => (lastName) =>
+  console.log(`${firstName} ${lastName}`);
+fullName("Joshua")("Pautanes");
 
 let addTwoNumber = (num1) => (num2) => console.log(num1 + num2); // num1 = 2, num2 = 3
 addTwoNumber(2)(3); // 5
 
 let add = (num1) => (num2) => console.log(num1 + num2); // num1 = 5 num2 = 5, num1 = 10 num2 = 5
-let addByFive = add(5) // add (5)(5)
+let addByFive = add(5); // add (5)(5)
 let addByTen = add(10); // add(10)(5)
 
 addByFive(5);

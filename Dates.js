@@ -95,3 +95,5 @@ switch (d.getDay()) {
 console.log(
   `Today is year ${d.getUTCFullYear()} Month of ${month} and date is ${d.getDate()} which is ${day}`
 );
+
+// Today is year 2022 Month of February and date is 24 which is Thursday
