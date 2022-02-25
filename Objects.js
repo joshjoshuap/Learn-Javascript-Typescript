@@ -167,6 +167,7 @@ let gradeInfo = {
 console.log(
   `Your ${grade[0]} Grade is ${gradeInfo.Math.grade1} and ${gradeInfo.Math.grade2}`
 );
+// Your Math Grade is 80 and 90
 
 // Object Create
 let userInfo = {

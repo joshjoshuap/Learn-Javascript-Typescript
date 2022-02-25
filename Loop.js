@@ -4,16 +4,19 @@
 for (let i = 0; i < 10; i++) {
   console.log(i);
 }
+// 1 2 3 4 5 6 7 8 9 10
 
 console.log("Even Numbers:");
 for (let i = 0; i <= 10; i += 2) {
   console.log(i);
 }
+// 2 4 6 8 10
 
 console.log("Odd Numbers:");
 for (let i = 1; i < 10; i += 2) {
   console.log(i);
 }
+// 1 3 5 7 9
 
 // Nested Loop
 for (let i = 1; i <= 3; i++) {
@@ -42,6 +45,14 @@ for (let row of seatingArrangement) {
     console.log(student);
   }
 }
+/* 
+Joshua
+Juan
+Maria
+Angel
+Andres
+Emilio
+*/
 
 // For of - Object
 let grade = {
@@ -54,6 +65,12 @@ let grade = {
 for (let score of Object.values(grade)) {
   console.log(score);
 }
+/* 
+80
+82
+90
+100
+*/
 
 // For in - Object
 let grade = {
@@ -66,6 +83,12 @@ let grade = {
 for (let person in grade) {
   console.log(`${person} : ${grade[person]}`);
 }
+/* 
+jose : 80
+maria : 82
+juan : 90
+andres : 100
+*/
 
 // For Each - Single Array
 let num = [1, 2, 3, 4];
