@@ -117,7 +117,7 @@ let FullName = () => {
   return `${InputFirstName()} ${InputLastName()}`;
 };
 
-console.log(FullName());
+console.log(FullName()); // Joshua Pautanes
 
 //  Passing Data
 let userData = {
@@ -147,6 +147,10 @@ let UserInput = (userNameInput, userPasswordInput) => {
 };
 
 UserInput("Joshua", "1234");
+/* 
+User Exist
+Incorrect Password
+*/
 
 // Function calling Function
 let calcAverage = (score1, score2, score3) => {
@@ -161,11 +165,11 @@ let checkPassed = (grade1, grade2, grade3) => {
   } else [console.log(`You Failed Grade: ${totalGrade}`)];
 };
 
-checkPassed(80, 85, 100);
+checkPassed(80, 85, 100); // You Passed Grade: 88.33333333333333
 
 // Pop and get first array and last array
 let letters = [1, 2, 3, 4, 5];
-console.log(`${letters}`);
+console.log(`${letters}`); // 1,2,3,4,5
 let firstLetter = letters[0];
 let lastLetter = letters[letters.length - 1];
 for (let i = 0; i < letters.length + 4; i++) {
@@ -174,7 +178,7 @@ for (let i = 0; i < letters.length + 4; i++) {
 }
 letters.unshift(firstLetter);
 letters.push(lastLetter);
-console.log(`${letters}`);
+console.log(`${letters}`); // 1,5
 
 // BMI
 let markHeight = 1.9;
@@ -185,5 +189,5 @@ let johnHeight = 1.8;
 let johnWeight = 92;
 let johnBMI = johnWeight / johnHeight ** 2;
 
-console.log(`Mark BMI ${markBMI}`);
-console.log(`John BMI ${johnBMI}`);
+console.log(`Mark BMI ${markBMI}`); // Mark BMI 21.606648199445985
+console.log(`John BMI ${johnBMI}`); // John BMI 28.39506172839506

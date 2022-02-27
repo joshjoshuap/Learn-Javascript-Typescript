@@ -108,6 +108,14 @@ grades.forEach((Items) => {
     console.log(data);
   });
 });
+/* 
+Math
+Science
+English
+90
+80
+20 
+*/
 
 // Values - Object
 let grade = {
@@ -118,6 +126,12 @@ let grade = {
 };
 
 Object.values(grade).forEach((value) => console.log(value));
+/* 
+80
+82
+90
+100
+*/
 
 // Keys - Object
 let grade = {
@@ -128,6 +142,12 @@ let grade = {
 };
 
 Object.keys(grade).forEach((key) => console.log(`${key} : ${grade[key]}`));
+/* 
+jose : 80
+maria : 82
+juan : 90
+andres : 100
+*/
 
 // Entries - Object
 let grade = {
@@ -150,3 +170,7 @@ let movies = [
 movies.map(function (movie) {
   console.log(`Movie: ${movie.title} Rate: ${movie.score}`);
 });
+/* 
+Movie: a Rate: 10
+Movie: b Rate: 11
+*/

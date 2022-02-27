@@ -16,6 +16,7 @@ console.log(
 
 // using bracket
 console.log(`My Lastname is ${person.name["lastname"]}`);
+// My Fullname is Joshua Pautanes
 
 // Object with Array
 let person = {
@@ -29,7 +30,7 @@ let person = {
   hobbies: ["Kdrama", "Kpop"],
 };
 
-console.log(person.hobbies[1]);
+console.log(person.hobbies[1]); // Kpop
 
 // Object with Function
 let math = {
@@ -42,7 +43,7 @@ let math = {
   },
 };
 
-math.sum(1, 2);
+math.sum(1, 2); // 3
 
 // Destructing Object
 let student = {
@@ -53,7 +54,7 @@ let student = {
 };
 
 let { lastname, grade } = student;
-console.log(lastname);
+console.log(lastname); // Pautanes
 
 // Destructing Params
 let student = {
@@ -67,7 +68,7 @@ let fullName = ({ firstname, lastname }) => {
   console.log(`${firstname} ${lastname}`);
 };
 
-fullName(student);
+fullName(student); // Joshua Pautanes
 
 // Object Loop - For of
 let grade = {
@@ -80,6 +81,12 @@ let grade = {
 for (let score of Object.values(grade)) {
   console.log(score);
 }
+/* 
+80
+82
+90
+100
+*/
 
 // Object Loop - For in
 let grade = {
@@ -92,6 +99,12 @@ let grade = {
 for (let person in grade) {
   console.log(`${person} : ${grade[person]}`);
 }
+/* 
+jose : 80
+maria : 82
+juan : 90
+andres : 100
+*/
 
 // Object Values
 let grade = {
@@ -102,6 +115,12 @@ let grade = {
 };
 
 Object.values(grade).forEach((value) => console.log(value));
+/* 
+80
+82
+90
+100
+*/
 
 // Object Keys
 let grade = {
@@ -112,6 +131,12 @@ let grade = {
 };
 
 Object.keys(grade).forEach((key) => console.log(`${key} : ${grade[key]}`));
+/* 
+jose : 80
+maria : 82
+juan : 90
+andres : 100
+*/
 
 // Object Entries
 let grade = {
@@ -122,6 +147,12 @@ let grade = {
 };
 
 Object.entries(grade).forEach((value) => console.log(`${value[0]} : ${value[1]}`));
+/* 
+jose : 80
+maria : 82
+juan : 90
+andres : 100
+*/
 
 // Object Mapping Array
 let movies = [
@@ -132,6 +163,10 @@ let movies = [
 movies.map(function (movie) {
   console.log(`Movie: ${movie.title} Rate: ${movie.score}`);
 });
+/* 
+Movie: a Rate: 10
+Movie: b Rate: 11
+*/
 
 // Bracket Notation
 let userInfo = () => {
@@ -146,6 +181,12 @@ userInfo["password"] = "12345";
 for (let user in userInfo) {
   console.log(`${user} : ${userInfo[user]}`);
 }
+/* 
+firstname : Joshua
+lastname : Pautanes
+username : JoshuaP
+password : 12345
+*/
 
 // Array - Objects Combination
 let grade = ["Math", "English", "Science"];
@@ -181,4 +222,4 @@ let user1 = Object.create(userInfo);
 user1.age = 21; // add age set to 21
 user1.addFullname('Joshua', 'Lastname'); // pass data to addFullName method
 
-console.log(`Hello ${user1.firstname} Age ${user1.age}`);
+console.log(`Hello ${user1.firstname} Age ${user1.age}`); // Hello Joshua Age 21

@@ -23,6 +23,10 @@ checkAge(age)
   .catch((err) => {
     console.log(err);
   });
+/* 
+Jose Rizal
+You are allowed
+*/
 
 // Promises Resolve - Reject
 let userLogin = (username, password) => {
@@ -42,6 +46,7 @@ userLogin("admin", "admins")
   .catch((err) => {
     console.log(err);
   });
+  // Password Invalid
 
 // Chain Promises
 let displayName = (name) => {

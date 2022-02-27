@@ -18,7 +18,7 @@ let math = {
   },
 };
 
-math.add();
+math.add(); // 4
 
 // Constructor Function
 function registerUser(username, password, name, email, contacts) {
@@ -38,6 +38,10 @@ let user1 = new registerUser(
 );
 
 console.log(`Username: ${user1.username}\nPassword: ${user1.password}`);
+/* 
+Username: Josh Josh
+Password: 1234
+*/
 
 // Calling function
 let person = {
@@ -50,4 +54,4 @@ let person = {
   }
 }
 
-person.whatIsMyName(); 
+person.whatIsMyName(); // Joshua

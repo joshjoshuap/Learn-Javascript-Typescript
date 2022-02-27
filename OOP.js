@@ -32,6 +32,14 @@ console.log(
   `Username: ${user1.userName}\nPassword: ${user1.userPassword}\nEmail: ${user1.userEmail}\nFirstname: ${user1.userFirstName}\nLastname: ${user1.userLastName}\nAge: ${user1.userAge}
 `
 );
+/* 
+Username: Josh
+Password: Joshu123
+Email: josh@email.com
+Firstname: Joshua
+Lastname: Pautanes
+Age: 21
+*/
  
  // Prototype / Method
  registerUser.prototype.checkAge = function () {
@@ -44,6 +52,10 @@ console.log(
 
  console.log(`Hello ${user1.userFirstName} ${user1.checkAge()}`);
  console.log(`Hello ${user2.userFirstName} ${user2.checkAge()}`);
+/* 
+Hello Joshua You are Allowed
+Hello Juan Minor not Allowed
+*/
 
 // Class with Prototype / Method
 class userInfo {
@@ -71,6 +83,12 @@ class userInfo {
 let user1 = new userInfo("Joshua", "Pautanes", 21);
 user1.displayInfo();
 console.log(`Hello ${user1.firstName} ${user1.checkAge()}`);
+/* 
+Firstname: Joshua
+LastName: Pautanes
+Age: 21
+Hello Joshua You are Allowed
+*/
 
 // Get - Setters
 let person = {
@@ -90,6 +108,10 @@ let person = {
 console.log(person.fullName);
 person.setAge = 21;
 console.log(person.age);
+/* 
+Joshua Pautanes
+21
+*/
 
 // Object Create
 let userInfo = {
@@ -103,7 +125,7 @@ let user1 = Object.create(userInfo);
 user1.age = 21; // add age set to 21
 user1.addFullname('Joshua', 'Lastname'); // pass data to addFullName method
 
-console.log(`Hello ${user1.firstname} Age ${user1.age}`);
+console.log(`Hello ${user1.firstname} Age ${user1.age}`); // Hello Joshua Age 21
 
 // Inheritance Class
 class studentInfo {
@@ -137,6 +159,12 @@ student1.fullname();
 student1.math();
 student1.science();
 student1.english();
+/* 
+Joshua Pautanes
+Math : 80
+Science : 90
+English : 80
+*/
 
 // Inheritance Class 2 - Callbacks / Value
 class numberArray {
@@ -183,6 +211,12 @@ array1.even();
 
 console.log('-- ODD -- ');
 array1.odd();
+/* 
+-- Even -- 
+[ 2, 4 ]
+-- ODD -- 
+[ 1, 3, 5 ]
+*/
 
 // Inheritance Class - Super
 class studentData {
@@ -214,8 +248,8 @@ class student2Info extends studentData { // extending to student data
 let student1 = new student1Info("Joshua", "E", "Pautanes");
 let student2 = new student2Info("Jose", "Mercado", "Rizal", "Jr.");
 
-console.log(student1.displayInfo());
-console.log(student2.displayInfo());
+console.log(student1.displayInfo()); // Joshua E Pautanes
+console.log(student2.displayInfo()); // Jose Mercado Rizal Jr.
 
 // Encapsulation 
 class userInfo {
@@ -237,7 +271,6 @@ class userInfo {
   #privateMethod(){
     return this.#userPassword = 'Password Hacked!';
   }
-
 
 }
 
