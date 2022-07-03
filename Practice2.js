@@ -86,3 +86,103 @@ let person = {
 console.log(
   `My Name is ${person.firstName} ${person.lastName} i am ${person.age} years old and i spend my time on ${person.Hobbies[0]} ${person.Hobbies[1]}`
 );
+
+let number = [1, 2, 3];
+console.log(`Original Array \n${number}`);
+
+number.push(4);
+console.log(number);
+number.pop();
+number.pop();
+console.log(number);
+number.unshift(0);
+console.log(number);
+number.pop();
+number.shift();
+console.log(number);
+
+let fruit = ["Apple", "Banana", "Orange", "Mango"];
+console.log(fruit.slice(2));
+console.log(fruit.slice(1, 3));
+
+let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+let even = numbers.filter((num) => {
+  return num % 2 == 0;
+});
+
+let odd = numbers.filter((num) => {
+  return num % 2 == 1;
+});
+
+console.log(even);
+console.log(odd);
+
+let number = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+for (let i = 0; i <= number.length; i += 2) {
+  console.log(i);
+}
+
+for (let i = 1; i <= number.length; i += 2) {
+  console.log(i);
+}
+
+let persons = [
+  { firstName: "Jose", lastName: "Rizal" },
+  { firstName: "Andres", lastName: "Bonifacio" },
+];
+
+persons.map((person) => {
+  console.log(`Fullname: ${person.firstName} ${person.lastName}`);
+});
+
+let numbers = [1, 2, 5, 6, 8, 10];
+
+console.log(Math.max(...numbers));
+console.log(Math.min(...numbers));
+
+let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let total = 0;
+for (let i = 0; i < numbers.length; i++) {
+  total += numbers[i];
+}
+
+console.log(total);
+
+let num1 = [1,2,3];
+let num2 = [4,5];
+let numbers = num1.concat(num2);
+console.log(numbers);
+
+let name = {
+  fullname: function (firstName, secondName) {
+    return console.log(`${firstName} ${secondName}`);
+  }
+}
+
+name.fullname('Joshua', 'Pautanes');
+
+let person = {
+  firstName: 'Joshua',
+  lastName: 'Pautanes'
+}
+
+let {firstName, lastName} = person;
+console.log(`${firstName} ${lastName}`);
+
+let fullName = ({firstName, lastName}) => {
+  console.log(`${firstName} ${lastName}`);
+}
+
+fullName(person);
+
+let personAge = {
+  jose: 100,
+  juan: 0,
+  joshua: 21
+}
+
+for (let person in personAge) {
+  console.log(`${person} : ${personAge[person]}`);
+}
