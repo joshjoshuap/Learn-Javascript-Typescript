@@ -154,6 +154,16 @@ juan : 90
 andres : 100
 */
 
+// Object Find value using Bracket
+let personInfo = {
+  firstname: 'Joshua',
+  lastname: 'Pautanes',
+  hobbies: 'Programming',
+}
+
+let getPersonInfo = (getInfo) => personInfo[getInfo];
+console.log(getPersonInfo('firstname')); // Joshua
+
 // Object Mapping Array
 let movies = [
   { title: "a", score: 10 },
