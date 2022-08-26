@@ -37,7 +37,6 @@ Number:3
    No:2
 */
 
-
 // For Loop - Single Array
 let country = ["Thailand", "Philippines", "Indonesia", "Malaysia", "Vietnam"];
 for (let i = 0; i < country.length; i++) {
@@ -52,14 +51,14 @@ Vietnam
 */
 
 // For Loop - Multi Array
-let numbers = [
+let numsCharacter = [
   [1, 2, 3],
   ['A', 'B', 'C'],
 ];
 
-for (let i = 0; i < numbers.length; i++) {
-    for (let j = 0; j < numbers[i].length; j++) {
-        console.log(numbers[i][j]);
+for (let i = 0; i < numsCharacter.length; i++) {
+    for (let j = 0; j < numsCharacter[i].length; j++) {
+        console.log(numsCharacter[i][j]);
     }
 }
 /* 
@@ -106,6 +105,33 @@ Andres
 Emilio
 */
 
+// For Each - Single Array
+let num = [1, 2, 3, 4];
+
+num.forEach((numbers, i) => {
+  console.log(`Index ${i + 1} : ${numbers}`);
+});
+
+// For Each - Multi Array
+let grades = [
+  ["Math", "Science", "English"],
+  ["90", "80", "20"],
+];
+
+grades.forEach((Items) => {
+  Items.forEach((data) => {
+    console.log(data);
+  });
+});
+/* 
+Math
+Science
+English
+90
+80
+20 
+*/
+
 // For of - Object
 let grade = {
   jose: 80,
@@ -140,33 +166,6 @@ jose : 80
 maria : 82
 juan : 90
 andres : 100
-*/
-
-// For Each - Single Array
-let num = [1, 2, 3, 4];
-
-num.forEach((numbers, i) => {
-  console.log(`Index ${i + 1} : ${numbers}`);
-});
-
-// For Each - Multi Array
-let grades = [
-  ["Math", "Science", "English"],
-  ["90", "80", "20"],
-];
-
-grades.forEach((Items) => {
-  Items.forEach((data) => {
-    console.log(data);
-  });
-});
-/* 
-Math
-Science
-English
-90
-80
-20 
 */
 
 // Values - Object
