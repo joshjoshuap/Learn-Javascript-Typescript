@@ -21,10 +21,55 @@ for (let i = 1; i < 10; i += 2) {
 // Nested Loop
 for (let i = 1; i <= 3; i++) {
   console.log("Number:" + i);
-  for (let j = 1; j <= 5; j++) {
+  for (let j = 1; j <= 2; j++) {
     console.log("   No:" + j);
   }
 }
+/*
+Number:1
+   No:1
+   No:2
+Number:2
+   No:1
+   No:2
+Number:3
+   No:1
+   No:2
+*/
+
+
+// For Loop - Single Array
+let country = ["Thailand", "Philippines", "Indonesia", "Malaysia", "Vietnam"];
+for (let i = 0; i < country.length; i++) {
+  console.log(country[i]);
+}
+/* 
+Thailand
+Philippines
+Indonesia
+Malaysia
+Vietnam
+*/
+
+// For Loop - Multi Array
+let numbers = [
+  [1, 2, 3],
+  ['A', 'B', 'C'],
+];
+
+for (let i = 0; i < numbers.length; i++) {
+    for (let j = 0; j < numbers[i].length; j++) {
+        console.log(numbers[i][j]);
+    }
+}
+/* 
+1
+2
+3
+A
+B
+C
+*/
 
 // For of - Single Array
 let number = [1, 2, 3, 4, 5];
@@ -32,6 +77,13 @@ let number = [1, 2, 3, 4, 5];
 for (let nums of number) {
   console.log(nums);
 }
+/* 
+1
+2
+3
+4
+5
+*/
 
 // For of - Multi Array
 let seatingArrangement = [
