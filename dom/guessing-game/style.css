@@ -1,0 +1,44 @@
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container {
+  display: grid;
+  justify-content: center;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.container > h1 {
+  text-align: center;
+}
+
+.form {
+  display: grid;
+  grid-template-rows: 1fr;
+}
+
+input {
+  justify-self: center;
+  height: 50px;
+  width: 200px;
+  padding: 10px;
+  margin: 10px 0;
+  text-align: center;
+}
+
+button {
+  justify-self: center;
+  height: 50px;
+  width: 100px;
+  margin: 10px 0;
+}
+
+.guessGuide {
+  font-size: 32px;
+  text-align: center;
+}
+
+.reset {
+  visibility: hidden;
+}

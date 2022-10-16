@@ -1,0 +1,113 @@
+body {
+  font-family: "Courier New", Courier, monospace;
+  margin: 0;
+  padding: 0;
+}
+
+.icon {
+  height: 32px;
+  width: 32px;
+}
+
+.container {
+  display: grid;
+  justify-content: center;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.main-title {
+  font-size: 48px;
+  padding: 10px;
+  text-align: center;
+}
+
+table {
+  background-color: #f7f7f7;
+  width: 100%;
+  padding: 20px 100px;
+  border-radius: 20px;
+  box-shadow: 0px 1.3px 2.7px rgba(0, 0, 0, 0.051),
+    0px 3.3px 6.9px rgba(0, 0, 0, 0.062), 0px 6.7px 14.2px rgba(0, 0, 0, 0.073),
+    0px 13.9px 29.2px rgba(0, 0, 0, 0.086), 0px 38px 80px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+th {
+  font-size: 32px;
+  font-weight: 900;
+}
+
+td {
+  font-size: 18px;
+  padding: 20px;
+  font-weight: 600;
+}
+
+/* Media Query */
+@media screen and (max-width: 1030px) {
+
+  table {
+    width: 100%;
+    padding: 20px 50px;
+  }
+
+  th {
+    font-size: 24px;
+  }
+
+  td {
+    font-size: 16px;
+  }
+}
+
+@media  screen and (max-width: 800px) {
+  .main-title {
+    font-size: 28px;
+  }
+
+
+  table {
+    width: 60%;
+    padding: 15px 30px;
+  }
+
+  th {
+    font-size: 20px;
+  }
+
+  td {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .icon {
+    height: 22px;
+    width: 22px;
+  }
+
+  .container {
+    display: block;
+    width: 100%;
+  }
+
+  .main-title {
+    font-size: 24px;
+  }
+
+  table {
+    width: 100%;
+    padding: 0;
+    border-radius: 0;
+  }
+  th {
+    font-size: 16px;
+    font-weight: 800;
+  }
+  td {
+    font-size: 12px;
+    font-weight: 700;
+    padding: 5px;
+  }
+}
