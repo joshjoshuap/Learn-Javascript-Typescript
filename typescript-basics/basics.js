@@ -1,27 +1,33 @@
+"use strict";
 // Primitives
-var age;
-var wrongAge;
+let age;
+let wrongAge;
 age = 12;
 wrongAge = '1'; // warning error
-var userName;
+let userName;
 userName = 'Josh';
-var isValid;
+let isValid;
 isValid = true;
 // Array
-var names; // string array
+let names; // string array
 names = ['Josh', 'John'];
-var numbers; // number array
+let numbers; // number array
 numbers = [1, 2, 3];
 // Objects
-var person; // object with data type
+let person; // object with data type
 person = {
     name: 'Josh',
-    age: 21
+    age: 21,
 };
 person = {
     name: 'Josh',
-    age: '21'
+    age: '21', // warning error
 };
-var section; // union type
+let section; // union type
 section = '1';
 section = 1;
+// Functions
+// return number type from a + b
+function add(a, b) {
+    return a + b;
+}
