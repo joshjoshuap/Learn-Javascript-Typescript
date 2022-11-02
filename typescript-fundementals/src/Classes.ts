@@ -3,11 +3,11 @@ class Department {
   public name: string; // accessible outside department class
   readonly employeeId: string; // can only access but cannot change - public readonly, private readonly
 
-  private employees: string[] = []; // access only in department class
+  public employees: string[] = [];
 
-  constructor(name: string, id: string) {
-    this.name = name;
+  constructor(id: string, name: string) {
     this.employeeId = id;
+    this.name = name;
   }
 
   displayInfo() {
@@ -23,24 +23,36 @@ class Department {
   }
 }
 
-let accounting = new Department("Accounting Department", "12345");
+let accounting = new Department("1234", "Accounting Department");
 
-accounting.addEmployee("Joshua");
-accounting.addEmployee("Jose");
-
+accounting.addEmployee("Maria");
 accounting.displayInfo();
 accounting.displayListEmployees();
-accounting.name; // Accounting Department
+// accounting.name; // Accounting Department
 // accounting.employees[1]; // error
 
 /* 
-Accounting
+Accounting Department
 ['Joshua', 'Jose']
+*/
+
+// Inheritance
+class ITDepartment extends Department {
+  constructor(id: string) {
+    super(id, "IT Department");
+  }
+}
+
+let IT = new ITDepartment("000");
+IT.displayInfo();
+
+/* 
+IT Department
 */
 
 // Shorhands Initialization
 class Departments {
-  private employees: string[] = [];
+  //   private employees: string[] = [];
 
   // for shorthand can directly to intialize public/private & property into constructor
   constructor(public name: string, readonly employeeId: string) {
