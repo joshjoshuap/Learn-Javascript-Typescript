@@ -102,3 +102,33 @@ let numberArrayInString: flexibleArrayNumber[] = ["one", "two", "three"];
 
 console.log(numberArrayInNumber); // [1, 2, 3, 4, 5, 6]
 console.log(numberArrayInString); // ['one', 'two', 'three']
+
+// Intersection Types
+type Admin = {
+  name: string;
+  position: string[];
+};
+
+type Employee = {
+  name: string;
+  salary: number;
+};
+
+type EmployeeInfo = Admin & Employee;
+
+const employee1: EmployeeInfo = {
+  name: "Josh",
+  position: ["Accounting"],
+  salary: 100000,
+};
+
+console.log(employee1.name); // Josh
+
+// Optional Chaining
+let personInfo = {
+  name: "Joshua",
+  age: 22,
+  // address: { city: "Quezon City", country: "Philippines" },
+};
+
+console.log(personInfo?.address?.city); // not throw/display error
