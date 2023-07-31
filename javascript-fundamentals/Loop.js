@@ -53,13 +53,13 @@ Vietnam
 // For Loop - Multi Array
 let numsCharacter = [
   [1, 2, 3],
-  ['A', 'B', 'C'],
+  ["A", "B", "C"],
 ];
 
 for (let i = 0; i < numsCharacter.length; i++) {
-    for (let j = 0; j < numsCharacter[i].length; j++) {
-        console.log(numsCharacter[i][j]);
-    }
+  for (let j = 0; j < numsCharacter[i].length; j++) {
+    console.log(numsCharacter[i][j]);
+  }
 }
 /* 
 1
@@ -212,16 +212,51 @@ Object.entries(grade).forEach((value) =>
   console.log(`${value[0]} : ${value[1]}`)
 );
 
-// Map - Object, Array
-let movies = [
-  { title: "a", score: 10 },
-  { title: "b", score: 11 },
+// Looping Object Array
+let personList = [
+  { name: "Juan", age: 1, job: "None" },
+  { name: "Jose", age: 100, job: "Hero" },
+  { name: "Elon", age: 50, job: "CEO" },
 ];
 
-movies.map(function (movie) {
-  console.log(`Movie: ${movie.title} Rate: ${movie.score}`);
+for (let i = 0; i < personList.length; i++) {
+  let personName = personList[i].name;
+  let personAge = personList[i].age;
+  let personJob = personList[i].job;
+
+  console.log(`Name: ${personName} Age: ${personAge} Job: ${personJob}`);
+}
+
+personList.forEach((personDetails) => {
+  console.log(
+    `Name: ${personDetails.name} Age: ${personDetails.age} Job: ${personDetails.job}`
+  );
+});
+
+for (let personDetails of personList) {
+  console.log(
+    `Name: ${personDetails.name} Age: ${personDetails.age} Job: ${personDetails.job}`
+  );
+}
+
+/* 
+Name: Juan Age: 1 Job: None
+Name: Jose Age: 100 Job: Hero
+Name: Elon Age: 50 Job: CEO
+*/
+
+// Mapping Object Array
+let personDetails = [
+  { name: "Juan", age: 1, job: "None" },
+  { name: "Jose", age: 100, job: "Hero" },
+  { name: "Elon", age: 50, job: "CEO" },
+];
+
+personDetails.map(function (person) {
+  console.log(`Name: ${person.name} Age: ${person.age} Job: ${person.job}`);
 });
 /* 
-Movie: a Rate: 10
-Movie: b Rate: 11
+Name: Juan Age: 1 Job: None
+Name: Jose Age: 100 Job: Hero
+Name: Elon Age: 50 Job: CEO
 */

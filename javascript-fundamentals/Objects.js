@@ -146,7 +146,9 @@ let grade = {
   andres: 100,
 };
 
-Object.entries(grade).forEach((value) => console.log(`${value[0]} : ${value[1]}`));
+Object.entries(grade).forEach((value) =>
+  console.log(`${value[0]} : ${value[1]}`)
+);
 /* 
 jose : 80
 maria : 82
@@ -156,26 +158,61 @@ andres : 100
 
 // Object Find value using Bracket
 let personInfo = {
-  firstname: 'Joshua',
-  lastname: 'Pautanes',
-  hobbies: 'Programming',
-}
+  firstname: "Joshua",
+  lastname: "Pautanes",
+  hobbies: "Programming",
+};
 
 let getPersonInfo = (getInfo) => personInfo[getInfo];
-console.log(getPersonInfo('firstname')); // Joshua
+console.log(getPersonInfo("firstname")); // Joshua
 
-// Object Mapping Array
-let movies = [
-  { title: "a", score: 10 },
-  { title: "b", score: 11 },
+// Looping Object Array
+let personList = [
+  { name: "Juan", age: 1, job: "None" },
+  { name: "Jose", age: 100, job: "Hero" },
+  { name: "Elon", age: 50, job: "CEO" },
 ];
 
-movies.map(function (movie) {
-  console.log(`Movie: ${movie.title} Rate: ${movie.score}`);
+for (let i = 0; i < personList.length; i++) {
+  let personName = personList[i].name;
+  let personAge = personList[i].age;
+  let personJob = personList[i].job;
+
+  console.log(`Name: ${personName} Age: ${personAge} Job: ${personJob}`);
+}
+
+personList.forEach((personDetails) => {
+  console.log(
+    `Name: ${personDetails.name} Age: ${personDetails.age} Job: ${personDetails.job}`
+  );
+});
+
+for (let personDetails of personList) {
+  console.log(
+    `Name: ${personDetails.name} Age: ${personDetails.age} Job: ${personDetails.job}`
+  );
+}
+
+/* 
+Name: Juan Age: 1 Job: None
+Name: Jose Age: 100 Job: Hero
+Name: Elon Age: 50 Job: CEO
+*/
+
+// Mapping Object Array
+let personDetails = [
+  { name: "Juan", age: 1, job: "None" },
+  { name: "Jose", age: 100, job: "Hero" },
+  { name: "Elon", age: 50, job: "CEO" },
+];
+
+personDetails.map(function (person) {
+  console.log(`Name: ${person.name} Age: ${person.age} Job: ${person.job}`);
 });
 /* 
-Movie: a Rate: 10
-Movie: b Rate: 11
+Name: Juan Age: 1 Job: None
+Name: Jose Age: 100 Job: Hero
+Name: Elon Age: 50 Job: CEO
 */
 
 // Bracket Notation
@@ -224,12 +261,12 @@ console.log(
 let userInfo = {
   addFullname(firstname, lastname) {
     this.firstname = firstname;
-    this.lastname = lastname
-  }
+    this.lastname = lastname;
+  },
 };
 
 let user1 = Object.create(userInfo);
 user1.age = 21; // add age set to 21
-user1.addFullname('Joshua', 'Lastname'); // pass data to addFullName method
+user1.addFullname("Joshua", "Lastname"); // pass data to addFullName method
 
 console.log(`Hello ${user1.firstname} Age ${user1.age}`); // Hello Joshua Age 21
